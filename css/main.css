@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Chivo&family=Overpass&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chivo&family=Roboto+Condensed:wght@400;700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -9,6 +9,7 @@
 
 body {
   background-color: #FFFFFF;
+  font-family: Chivo;
 }
 
 header {
@@ -30,6 +31,10 @@ header .order-button {
   background-color: #F36B2B;
   color: #FFFFFF;
   border: 2px solid transparent;
+  font-family: "Roboto Condensed";
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 1px;
   -webkit-transition: 250ms ease-in-out;
   transition: 250ms ease-in-out;
 }
@@ -38,6 +43,16 @@ header .order-button:hover, header .order-button:active {
   background-color: #FFFFFF;
   color: #1f1b1b;
   border: 2px solid #F36B2B;
+}
+
+header .left h1 {
+  font-family: Chivo;
+}
+
+header .left p {
+  font-family: "Roboto Condensed";
+  margin: 1rem 0;
+  font-size: 1.2rem;
 }
 
 .bg-left {
@@ -57,13 +72,23 @@ section {
   height: 100%;
   -ms-grid-columns: 2fr 2fr;
       grid-template-columns: 2fr 2fr;
-  margin: 1rem 0;
+  margin: 5rem 0;
   padding: 1rem 0;
 }
 
 section .text {
   width: 50%;
-  font-size: 2rem;
+}
+
+section .text p {
+  font-size: 1.7rem;
+  line-height: 3rem;
+  color: #6A6A6A;
+}
+
+section .text span {
+  color: #F36B2B;
+  font-weight: 600;
 }
 
 section .image img {

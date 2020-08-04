@@ -1,7 +1,9 @@
 @import "./variables";
 
+
 body {
     background-color: $c5;
+    font-family: $f1;
 }
 
 header {
@@ -16,6 +18,10 @@ header {
         background-color: $c1;
         color: $c5;
         border: 2px solid transparent;
+        font-family: $f2;
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: 1px;
         transition: 250ms ease-in-out;
 
         &:hover, &:active {
@@ -26,7 +32,17 @@ header {
     }
 
     .left {
+        h1 {
+            // width: 90%;
+            font-family: $f1;
+        }
 
+        p {
+            font-family: $f2;
+            margin: 1rem 0;
+            font-size: 1.2rem;
+
+        }
     }
 
     .right {
@@ -51,14 +67,20 @@ section {
     height: 100%;
     grid-template-columns: 2fr 2fr;
     // background-color: $c1;
-    margin: 1rem 0;
+    margin: 5rem 0;
     padding: 1rem 0;
 
     .text {
-        // background-color: $c1;
-        // height: 100%;
         width: 50%;
-        font-size: 2rem;
+        p {
+            font-size: 1.7rem;
+            line-height: 3rem;
+            color: $c3;
+        }
+        span {
+            color: $c1;
+            font-weight: 600;
+        }
     }
 
     .image {
