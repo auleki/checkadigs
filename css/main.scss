@@ -1,0 +1,79 @@
+@import "./variables";
+
+body {
+    background-color: $c5;
+}
+
+header {
+    height: 30rem;
+    background-color: $c2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .order-button {
+        padding: 1rem 2rem;
+        background-color: $c1;
+        color: $c5;
+        border: 2px solid transparent;
+        transition: 250ms ease-in-out;
+
+        &:hover, &:active {
+            background-color: $c5;
+            color: $c4;
+            border: 2px solid $c1;
+        }
+    }
+
+    .left {
+
+    }
+
+    .right {
+
+    }
+
+}
+
+.bg-left {    
+    background: url("/images/bg-left.png") fixed center no-repeat;
+    background-size: cover;
+}
+
+.bg-right {    
+    background: url("/images/bg-right.png") fixed center no-repeat;
+    background-size: cover;
+}
+section {
+    // clip-path: polygon(100% 28%, 100% 100%, 0 100%, 0 0);
+    display: grid;
+    place-items: center;
+    height: 100%;
+    grid-template-columns: 2fr 2fr;
+    // background-color: $c1;
+    margin: 1rem 0;
+    padding: 1rem 0;
+
+    .text {
+        // background-color: $c1;
+        // height: 100%;
+        width: 50%;
+        font-size: 2rem;
+    }
+
+    .image {
+        img {
+            z-index: 1000;
+            height: auto;
+            width: 20rem;
+        }
+    }
+}
+
+footer {
+    margin-top: 5rem;
+    background-color: $c2;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
