@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CheckADigs</title>
-    
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -13,16 +13,23 @@
        <div class="left">
            <h1>We'll be launching our website soon</h1>
            <p>But please feel free to place an order via Whatsapp</p>
-           <button class="order-button">Place Order</button>
+           <a href="https://api.whatsapp.com/send?phone=2348130267643&text=Hi%20there%20Kenny,%20I'd%20love%20to%20make%20a%20purchase" class="order-button">
+                <span>Place Order</span><i class="lab la-whatsapp"></i>
+            </a>
        </div>
 
        <div class="right">
            <img src="images/fashion-business.png" alt="header graphic">
        </div>
+
+       <div class="point">
+        <i id="word" class="las la-angle-double-down"></i>
+       </div>
+
    </header>
 
    <main>
-       <section class="bg-left wow fadeInUpBig reverse">
+       <section id="genesis" class="bg-left wow fadeInUpBig reverse">
            <div class="text wow fadeInLeftBig">
                <p>WHO DOESNT LIKE THEIR <span>MONEY</span> WHERE THEY CAN SEE IT, HANGING IN THE CLOSET</p>
            </div>
@@ -72,17 +79,29 @@
        </section>
    </main>
 
-   <footer>
+   <footer class="wow fadeIn">
        <div class="icons">
-           <p>social icons</p>
+           <a href="" class="links">
+            <i class="lab la-instagram"></i>
+           </a>
+
+           <a href="https://twitter.com/check_adigs" class="links">
+            <i class="lab la-twitter"></i>
+           </a>
+
+           <a href="" class="links">
+            <i class="lab la-facebook-f"></i>
+           </a>       
        </div>
 
        <div class="text">
-           <p>Powered by Check Adigs</p>
+           <p>Powered by <span>Check Adigs</span></p>
        </div>
 
        <div class="phone">
-           <a href="tel:+2348130267643">+2348130267643</a>
+           <a class="links" href="tel:+2348130267643">
+               <i class="las la-phone"></i><span>+2348130267643</span>
+            </a>
        </div>
    </footer>
 
