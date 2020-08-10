@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo&family=Roboto+Condensed:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: #1f1b1b;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Roboto Condensed";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.title {
+  margin-bottom: 1rem;
+}
+
+.actions {
+  text-decoration: none;
+  background-color: #F36B2B;
+  color: #F4F4F4;
+  padding: .5rem 1rem;
+  font-size: 1.2rem;
+  margin: .5rem 0;
+  border-radius: .3rem;
+  -webkit-transition: 450ms ease-in-out;
+  transition: 450ms ease-in-out;
+}
+
+.actions:hover {
+  color: #E33D3D;
+  background-color: #F4F4F4;
+}
+
+.quiz-game .container #question {
+  margin: 2rem 0;
+}
+
+.quiz-game .container .choice-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 0;
+  background-color: #FFFFFF;
+}
+
+.quiz-game .container .choice-container .choice-prefix {
+  background-color: #F36B2B;
+  padding: 1rem;
+}
+
+.quiz-game .container .choice-container .choice-text {
+  color: #F36B2B;
+  margin: 0 1rem;
+}
+/*# sourceMappingURL=quiz.css.map */

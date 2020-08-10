@@ -1,0 +1,75 @@
+@import './variables';
+
+body {
+  height: 100vh;
+  background-color: $c4;
+  color: $c5;
+  display: flex;
+  justify-content: center;
+  font-family: $f2;
+  align-items: center;
+  flex-direction: column;
+}
+
+// $f1: Chivo;
+// $f2: "Roboto Condensed";
+// $c1: #F36B2B;
+// $c2: #F4F4F4;
+// $c3: #6A6A6A;
+// $c4: rgb(31, 27, 27);
+// $c5: #FFFFFF; 
+// $c6: #E33D3D;
+
+.title {
+  margin-bottom: 1rem;
+}
+
+.actions {
+  text-decoration: none;
+  background-color: $c1;
+  color: $c2;
+  padding: .5rem 1rem;
+  font-size: 1.2rem;
+  margin: .5rem 0;
+  border-radius: .3rem;
+
+  transition: 450ms ease-in-out;
+  &:hover {
+    color: $c6;
+    background-color: $c2;
+    
+  }
+}
+
+// all styles here will apply only to the quiz game page
+
+.quiz-game {
+
+  .container {
+    // background-color: #fff;
+
+    #question {
+      margin: 2rem 0;
+    }
+
+    .choice-container {
+      display: flex;
+      align-items: center;
+      margin: 1rem 0;
+      background-color: $c5;
+
+
+      .choice-prefix {
+        
+        background-color: $c1;
+        padding: 1rem;
+      }
+
+      .choice-text {
+        color: $c1;
+        margin: 0 1rem;
+      }
+    }
+
+  }
+}
