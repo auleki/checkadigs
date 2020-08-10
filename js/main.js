@@ -6,3 +6,4 @@ const genesis = document.getElementById("genesis");
 word.addEventListener("click", () => {
     genesis.scrollIntoView();
 })
+

@@ -57,7 +57,8 @@ body {
       align-items: center;
       margin: 1rem 0;
       background-color: $c5;
-
+      cursor: pointer;
+      
 
       .choice-prefix {
         
@@ -68,6 +69,21 @@ body {
       .choice-text {
         color: $c1;
         margin: 0 1rem;
+        width: 100%;
+      }
+
+      &:hover {
+        background-color: $c1;
+        color: $c2;
+        box-shadow: 0 0.4rem 1.4rem 0 rgba(224, 100, 18, 0.363);
+        transform: translateY(-.1rem);
+        transition: transform 150ms;
+
+        .choice-text {
+          color: $c5;
+          margin: 0 1rem;
+        }
+        
       }
     }
 

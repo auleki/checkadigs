@@ -61,6 +61,7 @@ body {
           align-items: center;
   margin: 1rem 0;
   background-color: #FFFFFF;
+  cursor: pointer;
 }
 
 .quiz-game .container .choice-container .choice-prefix {
@@ -70,6 +71,25 @@ body {
 
 .quiz-game .container .choice-container .choice-text {
   color: #F36B2B;
+  margin: 0 1rem;
+  width: 100%;
+}
+
+.quiz-game .container .choice-container:hover {
+  background-color: #F36B2B;
+  color: #F4F4F4;
+  -webkit-box-shadow: 0 0.4rem 1.4rem 0 rgba(224, 100, 18, 0.363);
+          box-shadow: 0 0.4rem 1.4rem 0 rgba(224, 100, 18, 0.363);
+  -webkit-transform: translateY(-0.1rem);
+          transform: translateY(-0.1rem);
+  -webkit-transition: -webkit-transform 150ms;
+  transition: -webkit-transform 150ms;
+  transition: transform 150ms;
+  transition: transform 150ms, -webkit-transform 150ms;
+}
+
+.quiz-game .container .choice-container:hover .choice-text {
+  color: #FFFFFF;
   margin: 0 1rem;
 }
 /*# sourceMappingURL=quiz.css.map */
