@@ -9,22 +9,6 @@
 
 body {
   height: 100vh;
-  background-color: #1f1b1b;
-  color: #FFFFFF;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-family: "Roboto Condensed";
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .title {
@@ -48,6 +32,44 @@ body {
   background-color: #F4F4F4;
 }
 
+.quiz-option {
+  background-color: #1f1b1b;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Roboto Condensed";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.quiz-game {
+  background-color: #1f1b1b;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Roboto Condensed";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .quiz-game .container #hud {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -66,9 +88,10 @@ body {
 }
 
 .quiz-game .container #hud #progressBar {
-  width: 20rem;
-  height: 4rem;
+  width: 10rem;
+  height: 1rem;
   border: solid 0.2rem #F36B2B;
+  border-radius: 10rem;
   margin-top: .5rem;
 }
 
@@ -131,6 +154,25 @@ body {
   margin: 0 1rem;
 }
 
+.btn-rev {
+  background-color: #FFFFFF;
+  text-decoration: none;
+  width: 100%;
+  color: #F36B2B;
+  padding: 1rem;
+  margin: 1rem 0;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  border-radius: .2rem;
+}
+
+.btn-rev:hover {
+  background-color: #F36B2B;
+  color: #FFFFFF;
+}
+
 .btn {
   background-color: #F36B2B;
   text-decoration: none;
@@ -150,7 +192,7 @@ body {
   color: #F36B2B;
 }
 
-.btn:disabled:hover {
+.btn:disabled {
   background: #f79e73;
   cursor: not-allowed;
 }
@@ -158,6 +200,25 @@ body {
 .gameover {
   height: 100vh;
   background-color: #1f1b1b;
+}
+
+.gameover {
+  background-color: #1f1b1b;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Roboto Condensed";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .gameover .container #end {
@@ -211,5 +272,38 @@ body {
 
 .gameover .container form input::placeholder {
   color: #6A6A6A;
+}
+
+.highscores {
+  position: relative;
+  color: #FFFFFF;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #1f1b1b;
+}
+
+.highscores #highScores {
+  position: relative;
+  top: 10rem;
+}
+
+.highscores #highScores #highScoreList {
+  margin: 3rem 0;
+  list-style-type: none;
+}
+
+.highscores #highScores #highScoreList .high-score {
+  padding: 1rem .5rem;
+  margin: 1rem 0;
+  border-radius: .1rem;
+  background-color: #F36B2B;
 }
 /*# sourceMappingURL=quiz.css.map */

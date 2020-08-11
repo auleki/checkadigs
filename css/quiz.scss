@@ -2,13 +2,13 @@
 
 body {
   height: 100vh;
-  background-color: $c4;
-  color: $c5;
-  display: flex;
-  justify-content: center;
-  font-family: $f2;
-  align-items: center;
-  flex-direction: column;
+  // background-color: $c4;
+  // color: $c5;
+  // display: flex;
+  // justify-content: center;
+  // font-family: $f2;
+  // align-items: center;
+  // flex-direction: column;
 }
 
 // $f1: Chivo;
@@ -42,8 +42,25 @@ body {
 }
 
 // all styles here will apply only to the quiz game page
+.quiz-option {
+  background-color: $c4;
+  color: $c5;
+  display: flex;
+  justify-content: center;
+  font-family: $f2;
+  align-items: center;
+  flex-direction: column;
+}
+
 
 .quiz-game {
+  background-color: $c4;
+  color: $c5;
+  display: flex;
+  justify-content: center;
+  font-family: $f2;
+  align-items: center;
+  flex-direction: column;
 
   .container {
     // background-color: #fff;
@@ -60,9 +77,10 @@ body {
       }
 
       #progressBar {
-        width: 20rem;
-        height: 4rem;
+        width: 10rem;
+        height: 1rem;
         border: solid .2rem $c1;
+        border-radius: 10rem;
         margin-top:  .5rem;
       }
 
@@ -127,6 +145,26 @@ body {
   }
 }
 
+.btn-rev {
+  background-color: $c5;
+  text-decoration: none;
+  width: 100%;
+  color: $c1;
+  padding: 1rem;
+  margin: 1rem 0;
+  text-align: center;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+  border-radius: .2rem;
+
+  &:hover {
+    background-color: $c1;
+    color: $c5;
+  }
+}
+
+
+
 .btn {
   background-color: $c1;
   text-decoration: none;
@@ -144,17 +182,25 @@ body {
     color: $c1;
   }
 
-  &:disabled:hover {
+  &:disabled {
     background: lighten($c1, 15%);
     cursor: not-allowed;
   }
-  
 }
 
 .gameover {
   height: 100vh;
   background-color: $c4;
+}
 
+.gameover {
+  background-color: $c4;
+  color: $c5;
+  display: flex;
+  justify-content: center;
+  font-family: $f2;
+  align-items: center;
+  flex-direction: column;
 
   .container {
     // height: 100vh;
@@ -189,4 +235,32 @@ body {
 
     }
   }
+}
+
+.highscores {
+  position: relative;
+  color: $c5;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $c4;
+
+  #highScores {
+    position: relative;
+    top: 10rem;
+
+    #highScoreList {
+      margin: 3rem 0;
+      list-style-type: none;
+      .high-score {
+        padding: 1rem .5rem;
+        margin: 1rem 0;
+        border-radius: .1rem;
+        background-color: $c1;
+
+      }
+    }
+  }
+
 }

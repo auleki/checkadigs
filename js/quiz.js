@@ -89,7 +89,7 @@ getNewQuestion = () => {
   progressText.innerText = `Question: ${questionCounter}/${MAX_QUESTIONS}`
   // console.log((questionCounter / MAX_QUESTIONS) * 100);
   const quizProgress = `${(questionCounter / MAX_QUESTIONS)  * 100 }`
-  console.log(quizProgress);
+  // console.log(quizProgress);
   progressBarFull.style.width = `${quizProgress}%`
 
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);  
@@ -101,7 +101,7 @@ getNewQuestion = () => {
     const number = choice.dataset['number'];
     choice.innerText = currentQuestion["choice" + number];    
   });
-  console.log(availableQuestions);
+// console.log(availableQuestions);
 
   availableQuestions.splice(questionIndex, 1);
   acceptingAnswers = true;  
