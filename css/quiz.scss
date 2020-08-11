@@ -48,6 +48,32 @@ body {
   .container {
     // background-color: #fff;
 
+    #hud {
+      display: flex;
+      justify-content: space-between;
+
+      .hud-prefix {
+        text-align: center;
+      }
+      .hud-main-text {
+        text-align: center;
+      }
+
+      #progressBar {
+        width: 20rem;
+        height: 4rem;
+        border: solid .2rem $c1;
+        margin-top:  .5rem;
+      }
+
+      #progressBarFull {
+        height: 100%;
+        background-color: $c1;
+        width: 0%;
+      }
+    }
+
+  
     #question {
       margin: 2rem 0;
     }
@@ -56,36 +82,111 @@ body {
       display: flex;
       align-items: center;
       margin: 1rem 0;
+      color: $c1;
       background-color: $c5;
       cursor: pointer;
       
 
       .choice-prefix {
-        
+        color: $c5;
         background-color: $c1;
         padding: 1rem;
       }
 
       .choice-text {
-        color: $c1;
+        // color: $c1;
         margin: 0 1rem;
         width: 100%;
       }
 
+      &.incorrect {
+        background-color: rgba(231, 22, 39, 0.933);
+        color: #fff;
+        
+      }
+      &.correct {
+        background-color: #0fe040; 
+        color: #fff;
+      }      
+
       &:hover {
-        background-color: $c1;
-        color: $c2;
+        // background-color: transparent;
+        // color: $c2;
         box-shadow: 0 0.4rem 1.4rem 0 rgba(224, 100, 18, 0.363);
         transform: translateY(-.1rem);
         transition: transform 150ms;
 
         .choice-text {
-          color: $c5;
+          // color: $c5;
           margin: 0 1rem;
         }
         
       }
     }
 
+  }
+}
+
+.btn {
+  background-color: $c1;
+  text-decoration: none;
+  width: 100%;
+  color: $c5;
+  padding: 1rem;
+  margin: 1rem 0;
+  text-align: center;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+  border-radius: .2rem;
+
+  &:hover {
+    background-color: $c5;
+    color: $c1;
+  }
+
+  &:disabled:hover {
+    background: lighten($c1, 15%);
+    cursor: not-allowed;
+  }
+  
+}
+
+.gameover {
+  height: 100vh;
+  background-color: $c4;
+
+
+  .container {
+    // height: 100vh;
+    // background-color: $c1;
+
+    #end {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+
+      input {
+        padding: 1.2rem;
+        margin: 1rem 0;
+        color: $c3;
+        border-radius: .2rem;
+        &:focus {
+          border: none;
+          outline: none;
+        }
+        &::placeholder {
+          color: $c3;
+        }
+      }
+
+
+    }
   }
 }

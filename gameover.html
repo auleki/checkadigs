@@ -4,10 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GameOver</title>
+  <link rel="stylesheet" href="css/quiz.css">
 </head>
-<body>
+<body class="gameover">
   
-  <h1>This is the end of the road friend</h1>
+  <div class="container">
+    <div id="end">
+      <h1 id="finalScore">0</h1>
+      <form>
+        
+        <input 
+          type="text" 
+          name="username" 
+          id="username"
+          placeholder="username"  
+          autocomplete="off"        
+          />
 
+          <button 
+            id="saveScoreBtn" 
+            type="submit" 
+            class="btn" 
+            onclick="saveHighScore(event)"          
+            disabled
+            >
+            Save
+          </button>
+      </form>
+      <a href="/start-quiz.html" class="btn">Play Again</a>
+      <a href="/" class="btn">Go Home</a>
+    </div>
+  </div>
+
+  <script src="js/end.js"></script>
 </body>
 </html>

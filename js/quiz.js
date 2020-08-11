@@ -1,11 +1,16 @@
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
+const questionCounterText = document.getElementById("questionCounter");
+const progressText = document.getElementById("progressText");
+const scoreText = document.getElementById("score");
+const progressBarFull = document.getElementById("progressBarFull");
+
 
 // console.log(choices);
 
 let currentQuestion = {};
 let acceptingAnswers = false;
-let score = 0;
+let score = 0;questionCounterText
 let questionCounter = 0;
 let availableQuestions = [];
 
@@ -34,11 +39,36 @@ let questions = [
     choice3: "msg('Hello World');",
     choice4: "alert('Hello World');",
     answer: 4
+  },
+  {
+    question: "What function do you convert a letter to lowercase with",
+    choice1: "string.().lowercase",
+    choice2: "string.lowerCase()",
+    choice3: "string = lowerCase()",
+    choice4: "string.upperCase();",
+    answer: 2
+  },
+  {
+    question: "Which language is used for automation mostly?",
+    choice1: "Python",
+    choice2: "Java",
+    choice3: "Javascript",
+    choice4: "Elm",
+    answer: 1
+  },
+  {
+    question: "Use a spread operator push the new data to the end",
+    choice1: "[{...data}, user]",
+    choice2: "[{..data}, user];",
+    choice3: "{user, ...data},",
+    choice4: "const {index, i} = data",
+    answer: 3
   }
+
 ]
 
 const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 3;
+const MAX_QUESTIONS = 6;
 
 startGame = () => {
   questionCounter = 0;
@@ -51,21 +81,27 @@ startGame = () => {
 getNewQuestion = () => {
 
   if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+    localStorage.setItem('mostRecentScore', score);
     return window.location.assign("/gameover.html");
   }
 
   questionCounter++;
-  const questionIndex = Math.floor(Math.random() * availableQuestions.length);
-  
+  progressText.innerText = `Question: ${questionCounter}/${MAX_QUESTIONS}`
+  // console.log((questionCounter / MAX_QUESTIONS) * 100);
+  const quizProgress = `${(questionCounter / MAX_QUESTIONS)  * 100 }`
+  console.log(quizProgress);
+  progressBarFull.style.width = `${quizProgress}%`
+
+  const questionIndex = Math.floor(Math.random() * availableQuestions.length);  
   currentQuestion = availableQuestions[questionIndex];
   question.innerText = currentQuestion.question;
   
 
   choices.forEach( choice => {
-    const number = choice.dataset['number']
+    const number = choice.dataset['number'];
     choice.innerText = currentQuestion["choice" + number];    
   });
-  console.log(availableQuestions)
+  console.log(availableQuestions);
 
   availableQuestions.splice(questionIndex, 1);
   acceptingAnswers = true;  
@@ -77,15 +113,36 @@ choices.forEach(choice => {
 
     acceptingAnswers = false;
     const selectedChoice = e.target;
-    const selectedAnswer = selectedChoice.dataset["number"]
-    // console.log(selectedAnswer);
+    const selectedAnswer = selectedChoice.dataset["number"];
+    const isCorrect = selectedAnswer == currentQuestion.answer;
 
-    console.log(selectedAnswer == currentQuestion.answer)
+    const classToApply = isCorrect ? 'correct' : 'incorrect';
+    console.log(classToApply.toString());
 
+    if(classToApply === 'correct') {
+      incrementScore(CORRECT_BONUS);
+    } else {
+      decrementScore(CORRECT_BONUS);
+    }
+    
+    selectedChoice.parentElement.classList.add(classToApply);
 
+    setTimeout(() => {
+      selectedChoice.parentElement.classList.remove(classToApply);
+      getNewQuestion();
+    }, 1000);
 
-    getNewQuestion();
   });
 });
+
+incrementScore = num => {
+  score += num;
+  scoreText.innerText = score;
+}
+
+decrementScore = num => {
+  score-= num;
+  scoreText.innerText = score;
+}
 
 startGame();
