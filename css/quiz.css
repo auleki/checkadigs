@@ -306,4 +306,11 @@ body {
   border-radius: .1rem;
   background-color: #F36B2B;
 }
+
+@media (max-width: 488px) {
+  .quiz-game .container {
+    width: 80%;
+    text-align: center;
+  }
+}
 /*# sourceMappingURL=quiz.css.map */

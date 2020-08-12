@@ -55,6 +55,7 @@ body {
 
 .quiz-game {
   background-color: $c4;
+  // width: 80%;
   color: $c5;
   display: flex;
   justify-content: center;
@@ -263,4 +264,16 @@ body {
     }
   }
 
+}
+
+
+ 
+@media (max-width: 488px) {
+  .quiz-game {
+    // text-align: center;
+    .container {
+      width: 80%;
+      text-align: center;
+    }
+  }
 }
