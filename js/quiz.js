@@ -1,6 +1,8 @@
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 const questionCounterText = document.getElementById("questionCounter");
+const loader = document.getElementById("loader");
+const game = document.getElementById("game");
 const progressText = document.getElementById("progressText");
 const scoreText = document.getElementById("score");
 const progressBarFull = document.getElementById("progressBarFull");
@@ -15,60 +17,42 @@ let questionCounter = 0;
 let availableQuestions = [];
 
 
-let questions = [
-  {
-    question: "Inside which HTML element do we put the JavaScript??",
-    choice1: "<script>",
-    choice2: "<javascript>",
-    choice3: "<js>",
-    choice4: "<scripting>",
-    answer: 1
-  },
-  {
-    question: "What is the correct syntax for referring to an external script called 'xxx.js'?",
-    choice1: "<script href='xxx.js'>",
-    choice2: "<script name='xxx.js'>",
-    choice3: "<script src='xxx.js'>",
-    choice4: "<script file='xxx.js'>",
-    answer: 3
-  },
-  {
-    question: " How do you write 'Hello World' in an alert box?",
-    choice1: "msgBox('Hello World');",
-    choice2: "alertBox('Hello World');",
-    choice3: "msg('Hello World');",
-    choice4: "alert('Hello World');",
-    answer: 4
-  },
-  {
-    question: "What function do you convert a letter to lowercase with",
-    choice1: "string.().lowercase",
-    choice2: "string.lowerCase()",
-    choice3: "string = lowerCase()",
-    choice4: "string.upperCase();",
-    answer: 2
-  },
-  {
-    question: "Which language is used for automation mostly?",
-    choice1: "Python",
-    choice2: "Java",
-    choice3: "Javascript",
-    choice4: "Elm",
-    answer: 1
-  },
-  {
-    question: "Use a spread operator push the new data to the end",
-    choice1: "[{...data}, user]",
-    choice2: "[{..data}, user];",
-    choice3: "{user, ...data},",
-    choice4: "const {index, i} = data",
-    answer: 3
-  }
+let questions = []
 
-]
+const baseURL = "https://opentdb.com/api.php?amount=10&category=15&difficulty=easy&type=multiple";
+
+fetch(baseURL)
+  .then(res => res.json())
+  .then(data => {
+    const fetchedQuestions = data.results;
+    console.log(fetchedQuestions);
+    questions = fetchedQuestions.map(loadedQuestion => {
+      const formattedQuestion = {
+        question: loadedQuestion.question
+      };
+
+      const answerChoices = [...loadedQuestion.incorrect_answers];
+      formattedQuestion.answer = Math.floor(Math.random() * 3) * 1;
+      answerChoices.splice(
+        formattedQuestion.answer - 1, 
+        0,
+        loadedQuestion.correct_answer
+        );
+        
+      answerChoices.forEach((choice, index) => {
+        formattedQuestion["choice" + (index + 1)] = choice;
+      });
+
+      return formattedQuestion;
+
+    })
+    
+    startGame();
+  }).catch(e => console.log(e))
+
 
 const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 6;
+const MAX_QUESTIONS = 10;
 
 startGame = () => {
   questionCounter = 0;
@@ -76,13 +60,23 @@ startGame = () => {
   availableQuestions = [...questions];
   // console.log(availableQuestions);
   getNewQuestion();
+  game.classList.remove("hidden");
+  loader.classList.add("hidden");
 };
 
-getNewQuestion = () => {
 
-  if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+
+getNewQuestion = () => {
+  // if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+  //   localStorage.setItem('mostRecentScore', score);
+  //   return window.location.assign("/gameover.html");
+  //   return console.log('no questions')
+  // }
+
+  if(questionCounter >= MAX_QUESTIONS) {
     localStorage.setItem('mostRecentScore', score);
     return window.location.assign("/gameover.html");
+    return console.log('no questions')
   }
 
   questionCounter++;
@@ -94,7 +88,7 @@ getNewQuestion = () => {
 
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);  
   currentQuestion = availableQuestions[questionIndex];
-  question.innerText = currentQuestion.question;
+  question.innerHTML = currentQuestion.question;
   
 
   choices.forEach( choice => {

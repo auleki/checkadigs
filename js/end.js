@@ -6,7 +6,7 @@ const mostRecentScore = localStorage.getItem("mostRecentScore");
 finalScore.innerText = mostRecentScore;
 
 const highScore = JSON.parse(localStorage.getItem("highScore")) || []
-console.log(highScore)
+// console.log(highScore)
 const MAX_HIGH_SCORES = 5;
 // console.log(history);
 
@@ -15,9 +15,16 @@ username.addEventListener("keyup", () => {
 });
 finalScore.innerText = `${mostRecentScore} points`;
 
+getIp = () => {
+  const uri = "https://api.ipify.org/?format=json";
+  fetch(uri).then(res => res.json()).then(ip => alert(ip.ip));
+}
+getIp();
+
  saveHighScore = e => {
   //  console.log("clicked the save", user)
    e.preventDefault();
+   
 
    const score = {
      score: mostRecentScore,

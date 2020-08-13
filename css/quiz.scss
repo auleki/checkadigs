@@ -63,6 +63,10 @@ body {
   align-items: center;
   flex-direction: column;
 
+  .hidden {
+    display: none;
+  }
+
   .container {
     // background-color: #fff;
 
@@ -143,6 +147,26 @@ body {
       }
     }
 
+  }
+
+
+
+  #loader {
+    border: 1.6rem solid white;
+    border-radius: 50%;
+    border-top: 1.6rem solid $c1;
+    width: 12rem;
+    height: 12rem;
+    animation: spin 2s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 }
 
@@ -240,6 +264,7 @@ body {
 
 .highscores {
   position: relative;
+  font-family: $f2;
   color: $c5;
   height: 100%;
   display: flex;
@@ -259,6 +284,11 @@ body {
         margin: 1rem 0;
         border-radius: .1rem;
         background-color: $c1;
+        color: $c4;
+
+        span {
+          color: $c5;
+        }
 
       }
     }
@@ -270,10 +300,18 @@ body {
  
 @media (max-width: 488px) {
   .quiz-game {
-    // text-align: center;
     .container {
       width: 80%;
       text-align: center;
     }
+    #loader {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0 auto;
+      // width: 100%;
+    }
   }
+
+  
 }
