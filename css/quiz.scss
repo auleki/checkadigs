@@ -306,8 +306,13 @@ body {
     }
     #loader {
       position: absolute;
-      top: 0;
-      left: 0;
+      border: 1rem solid white;
+      border-radius: 50%;
+      border-top: 1rem solid $c1;
+      width: 6rem;
+      height: 6rem;
+      top: 30%;
+      left: 30%;
       margin: 0 auto;
       // width: 100%;
     }

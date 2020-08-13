@@ -21,11 +21,10 @@ getIp = () => {
 }
 getIp();
 
+// Runs when the save button is clicked
  saveHighScore = e => {
   //  console.log("clicked the save", user)
    e.preventDefault();
-   
-
    const score = {
      score: mostRecentScore,
      name: username.value

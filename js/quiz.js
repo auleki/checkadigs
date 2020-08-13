@@ -52,7 +52,7 @@ fetch(baseURL)
 
 
 const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 10;
+const MAX_QUESTIONS = 3;
 
 startGame = () => {
   questionCounter = 0;
@@ -76,7 +76,7 @@ getNewQuestion = () => {
   if(questionCounter >= MAX_QUESTIONS) {
     localStorage.setItem('mostRecentScore', score);
     return window.location.assign("/gameover.html");
-    return console.log('no questions')
+    // return console.log('no questions')
   }
 
   questionCounter++;
