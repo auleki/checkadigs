@@ -56,6 +56,45 @@ header {
         }        
     }
 
+    .out-button {
+        padding: 1rem 2rem;
+        background-color: $c5;
+        color: $c1;
+        display: inline;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid $c1;
+        font-family: $f2;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        transition: 250ms ease-in-out;
+
+        i {
+            transition: 250ms ease-in-out;
+            font-size: 2rem;
+            vertical-align: middle;            
+            margin: .5rem;
+        }
+
+        &:hover, &:active {
+            // background-color: $c1;
+            color: $c1;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            border: 2px solid transparent;
+            margin-left: 5px;
+
+            
+
+            i {
+                color: $c1;   
+                transform: translateX(10px) rotate(380deg);
+            }
+        }        
+    }
+
     .point {
         position: absolute;
         bottom: 3rem;

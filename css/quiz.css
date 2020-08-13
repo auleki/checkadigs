@@ -355,14 +355,13 @@ body {
     text-align: center;
   }
   .quiz-game #loader {
-    position: absolute;
+    position: relative;
     border: 1rem solid white;
     border-radius: 50%;
     border-top: 1rem solid #F36B2B;
     width: 6rem;
     height: 6rem;
-    top: 30%;
-    left: 30%;
+    left: 0;
     margin: 0 auto;
   }
 }

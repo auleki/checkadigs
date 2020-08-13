@@ -78,6 +78,50 @@ header .order-button:hover i, header .order-button:active i {
           transform: translateX(10px) rotate(380deg);
 }
 
+header .out-button {
+  padding: 1rem 2rem;
+  background-color: #FFFFFF;
+  color: #F36B2B;
+  display: inline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid #F36B2B;
+  font-family: "Roboto Condensed";
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+}
+
+header .out-button i {
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+  font-size: 2rem;
+  vertical-align: middle;
+  margin: .5rem;
+}
+
+header .out-button:hover, header .out-button:active {
+  color: #F36B2B;
+  -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border: 2px solid transparent;
+  margin-left: 5px;
+}
+
+header .out-button:hover i, header .out-button:active i {
+  color: #F36B2B;
+  -webkit-transform: translateX(10px) rotate(380deg);
+          transform: translateX(10px) rotate(380deg);
+}
+
 header .point {
   position: absolute;
   bottom: 3rem;

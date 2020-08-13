@@ -19,7 +19,7 @@ let availableQuestions = [];
 
 let questions = []
 
-const baseURL = "https://opentdb.com/api.php?amount=10&category=15&difficulty=easy&type=multiple";
+const baseURL = "https://opentdb.com/api.php?amount=3&category=27&difficulty=easy&type=multiple";
 
 fetch(baseURL)
   .then(res => res.json())
