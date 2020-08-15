@@ -19,36 +19,41 @@ let availableQuestions = [];
 
 let questions = []
 
-const baseURL = "https://opentdb.com/api.php?amount=3&category=27&difficulty=easy&type=multiple";
+// const baseURL = "https://opentdb.com/api.php?amount=3&category=27&difficulty=easy&type=multiple";
+const baseURL = "https://raw.githubusercontent.com/auleki/checkadigs/master/questions.json";
 
 fetch(baseURL)
   .then(res => res.json())
-  .then(data => {
-    const fetchedQuestions = data.results;
-    console.log(fetchedQuestions);
-    questions = fetchedQuestions.map(loadedQuestion => {
-      const formattedQuestion = {
-        question: loadedQuestion.question
-      };
+  .then(data => console.log(data))
+  .catch(e => console.log(ez))
+// fetch(baseURL)
+//   .then(res => res.json())
+//   .then(data => {
+//     const fetchedQuestions = data.results;
+//     console.log(fetchedQuestions);
+//     questions = fetchedQuestions.map(loadedQuestion => {
+//       const formattedQuestion = {
+//         question: loadedQuestion.question
+//       };
 
-      const answerChoices = [...loadedQuestion.incorrect_answers];
-      formattedQuestion.answer = Math.floor(Math.random() * 3) * 1;
-      answerChoices.splice(
-        formattedQuestion.answer - 1, 
-        0,
-        loadedQuestion.correct_answer
-        );
+//       const answerChoices = [...loadedQuestion.incorrect_answers];
+//       formattedQuestion.answer = Math.floor(Math.random() * 3) * 1;
+//       answerChoices.splice(
+//         formattedQuestion.answer - 1, 
+//         0,
+//         loadedQuestion.correct_answer
+//         );
         
-      answerChoices.forEach((choice, index) => {
-        formattedQuestion["choice" + (index + 1)] = choice;
-      });
+//       answerChoices.forEach((choice, index) => {
+//         formattedQuestion["choice" + (index + 1)] = choice;
+//       });
 
-      return formattedQuestion;
+//       return formattedQuestion;
 
-    })
+//     })
     
-    startGame();
-  }).catch(e => console.log(e))
+//     startGame();
+//   }).catch(e => console.log(e))
 
 
 const CORRECT_BONUS = 10;
