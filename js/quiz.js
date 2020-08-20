@@ -6,54 +6,68 @@ const game = document.getElementById("game");
 const progressText = document.getElementById("progressText");
 const scoreText = document.getElementById("score");
 const progressBarFull = document.getElementById("progressBarFull");
+// const 
+
 
 
 // console.log(choices);
 
+
+
+
+
 let currentQuestion = {};
 let acceptingAnswers = false;
-let score = 0;questionCounterText
+let score = 0;
+questionCounterText
 let questionCounter = 0;
 let availableQuestions = [];
-
-
 let questions = []
 
 // const baseURL = "https://opentdb.com/api.php?amount=3&category=27&difficulty=easy&type=multiple";
-const baseURL = "https://raw.githubusercontent.com/auleki/checkadigs/master/questions.json";
-
-fetch(baseURL)
-  .then(res => res.json())
-  .then(data => console.log(data))
-  .catch(e => console.log(ez))
+// const baseURL = "questions.json";
+// const baseURL = "https://raw.githubusercontent.com/auleki/checkadigs/master/questions.json";
 // fetch(baseURL)
 //   .then(res => res.json())
 //   .then(data => {
-//     const fetchedQuestions = data.results;
-//     console.log(fetchedQuestions);
-//     questions = fetchedQuestions.map(loadedQuestion => {
-//       const formattedQuestion = {
-//         question: loadedQuestion.question
-//       };
-
-//       const answerChoices = [...loadedQuestion.incorrect_answers];
-//       formattedQuestion.answer = Math.floor(Math.random() * 3) * 1;
-//       answerChoices.splice(
-//         formattedQuestion.answer - 1, 
-//         0,
-//         loadedQuestion.correct_answer
-//         );
-        
-//       answerChoices.forEach((choice, index) => {
-//         formattedQuestion["choice" + (index + 1)] = choice;
-//       });
-
-//       return formattedQuestion;
-
-//     })
-    
-//     startGame();
+//     const fetchedData = JSON.stringify(data);
+//     console.log(fetchedData);
 //   }).catch(e => console.log(e))
+
+
+fetch('questions.json')
+  // .then(res => res)
+  // .then(data => console.log(data))
+  // .catch(err => console.log(err))
+
+  .then(res => res)
+  .then(data => {
+    const fetchedQuestions = data.url
+    console.log(fetchedQuestions)
+    // console.log(fetchedQuestions);
+    // questions = fetchedQuestions.map(loadedQuestion => {
+    //   const formattedQuestion = {
+    //     question: loadedQuestion.question
+    //   };
+
+    //   const answerChoices = [...loadedQuestion.incorrect_answers];
+    //   formattedQuestion.answer = Math.floor(Math.random() * 3) * 1;
+    //   answerChoices.splice(
+    //     formattedQuestion.answer - 1, 
+    //     0,
+    //     loadedQuestion.correct_answer
+    //     );
+        
+    //   answerChoices.forEach((choice, index) => {
+    //     formattedQuestion["choice" + (index + 1)] = choice;
+    //   });
+
+    //   return formattedQuestion;
+
+    // })
+    
+    // startGame();
+  }).catch(e => console.log(e))
 
 
 const CORRECT_BONUS = 10;

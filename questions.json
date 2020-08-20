@@ -1,48 +1,554 @@
-{
-  "question": "Inside which HTML element do we put the JavaScript??",
-  "choice1": "<script>",
-  "choice2": "<javascript>",
-  "choice3": "<js>",
-  "choice4": "<scripting>",
-  "answer": 1
-},
-{
-  "question": "What is the correct syntax for referring to an external script called 'xxx.js'?",
-  "choice1": "<script href='xxx.js'>",
-  "choice2": "<script name='xxx.js'>",
-  "choice3": "<script src='xxx.js'>",
-  "choice4": "<script file='xxx.js'>",
-  "answer": 3
-},
-{
-  "question": " How do you write 'Hello World' in an alert box?",
-  "choice1": "msgBox('Hello World');",
-  "choice2": "alertBox('Hello World');",
-  "choice3": "msg('Hello World');",
-  "choice4": "alert('Hello World');",
-  "answer": 4
-},
-{
-  "question": "What function do you convert a letter to lowercase with",
-  "choice1": "string.().lowercase",
-  "choice2": "string.lowerCase()",
-  "choice3": "string = lowerCase()",
-  "choice4": "string.upperCase();",
-  "answer": 2
-},
-{
-  "question": "Which language is used for automation mostly?",
-  "choice1": "Python",
-  "choice2": "Java",
-  "choice3": "Javascript",
-  "choice4": "Elm",
-  "answer": 1
-},
-{
-  "question": "Use a spread operator push the new data to the end",
-  "choice1": "[{...data}, user]",
-  "choice2": "[{..data}, user];",
-  "choice3": "{user, ...data},",
-  "choice4": "const {index, i} = data",
-  "answer": 3
-}
+[
+  {
+    "question": "__________ is more than just clothing",
+    "choice1": "<apparel>",
+    "choice2": "<garment>",
+    "choice3": "<clothing>",
+    "choice4": "<fashion>",
+    "answer": 4
+   },
+   {
+    "question": "__________ is a general term referring to actual objects related to the human body",
+    "choice1": "<costume>",
+    "choice2": "<wardrobe>",
+    "choice3": "<clothing>",
+    "choice4": "<wear ability>",
+    "answer": 3
+   },
+   {
+    "question": "________ and _________ are also indicating of the social and marital status of women",
+    "choice1": "dress and ornaments",
+    "choice2": "mangalsutra",
+    "choice3": "sindoor",
+    "choice4": "black scarf",
+    "answer": 1
+   },
+   {
+    "question": "In India, the coloured powder put in the hair parting called _______ is a visual indicator of married status of women",
+    "choice1": "sandal powder",
+    "choice2": "sindoor powder",
+    "choice3": "perfume",
+    "choice4": "turmeric",
+    "answer": 2
+   },
+   {
+    "question": "From the late 19th century a dust coloured light weight cotton fabric called _______ was used by the Indian Army during the British Raj",
+    "choice1": "poplin",
+    "choice2": "khaki",
+    "choice3": "silk",
+    "choice4": "polyester",
+    "answer": 2
+   },
+   {
+    "question": "Ritu Kumar was one of the earliest pioneers of fashion with extensive research in to block prints and innovative application of the technique of ________",
+    "choice1": "phulkari",
+    "choice2": "mirror work",
+    "choice3": "zardosiembroidery",
+    "choice4": "dye-prints",
+    "answer": 3
+   },
+   {
+    "question": "_________ waist belted, tucked or slashed to give excessive looseness to give comfort to the wearer",
+    "choice1": "phyjama",
+    "choice2": "flat front",
+    "choice3": "churidar",
+    "choice4": "Patiala salwar",
+    "answer": 4
+   },
+   {
+    "question": "__________ draped lower garment for men and women",
+    "choice1": "angarkha",	
+    "choice2": "flat-front",
+    "choice3": "antariya",
+    "choice4": "Patiala salwar",
+    "answer": 3
+   },
+   {
+    "question": "__________ French term for exclusive one-of-kind high fashion",
+    "choice1": "bespoke-shop",
+    "choice2": "Haute couture’s",
+    "choice3": "boutique",
+    "choice4": "showroom",
+    "answer": 2
+   },
+   {
+    "question": "_______ is the process of transforming a design into its constituent flat pattern pieces and then drafting them out",
+    "choice1": "pattern making",	
+    "choice2": "draping",
+    "choice3": "template",
+    "choice4": "blocks", 
+    "answer": 1
+   },
+   {
+    "question": "The highest point on the bust is __________",
+    "choice1": "gorge-point",
+    "choice2": "pleat",
+    "choice3": "dart",
+    "choice4": "apex",
+    "answer": 4
+   },
+   {
+    "question": "_______ refers to the amount of roominess in a garment",
+    "choice1": "grain line",
+    "choice2": "dart",
+    "choice3": "ease",
+    "choice4": "tuck",
+    "answer": 3
+   },
+   {
+    "question": "Ease is of ________ kinds, i.e., ________ and _______ ease",
+    "choice1": "fitting-ease",
+    "choice2": "4",
+    "choice3": "design-ease",
+    "choice4": "2",
+    "answer": 1
+   },
+   {
+    "question": "One of the first ________ that is done on muslin at the time when the pattern is made",
+    "choice1": "fullness",
+    "choice2": "test-fit",
+    "choice3": "final",
+    "choice4": "finishing",
+    "answer": 2
+   },
+   {
+    "question": "Dart manipulation of the front bodice consists of _____ types",
+    "choice1": "13",
+    "choice2": "4",
+    "choice3": "6",
+    "choice4": "8",
+    "answer": 1
+   },
+   {
+    "question": "________ is the dress fitted through the bodice, waist, and hips, and flaring out from the knees",
+    "choice1": "empire",
+    "choice2": "mermaid",
+    "choice3": "ball gown",
+    "choice4": "A-line",
+    "answer": 2
+   },
+   {
+    "question": "A straight, form fitting silhouette is _______",
+    "choice1": "trumpet",
+    "choice2": "mermaid",
+    "choice3": "sheath",
+    "choice4": "tulip",
+    "answer": 3
+   },
+   {
+    "question": "__________ is a high neck line that cuts straight across the collar bone",
+    "choice1": "jewel",	
+    "choice2": "cowl neck",
+    "choice3": "scoop",
+    "choice4": "boat neck",
+    "answer": 4
+   },
+   {
+    "question": "A sleeve cut wide at the armhole and tapering to the wrist is _________",
+    "choice1": "Dolman sleeve",
+    "choice2": "Puff sleeve",
+    "choice3": "Plain sleeve",
+    "choice4": "Tulip sleeve",
+    "answer": 1
+   },
+   {
+    "question": " _______ hugs tight against the body with hook, snap or laced back securing",
+    "choice1": "midriff",	
+    "choice2": "empire",
+    "choice3": "surplice",
+    "choice4": "corset", 
+    "answer": 4
+   },
+   {
+    "question": "A sheer soft knit fabric, most often 100% cotton as an informal fabric at weddings",
+    "choice1": "Moire",
+    "choice2": "Organdie",
+    "choice3": "Jersey",
+    "choice4": "Organza",
+    "answer": 3
+   },
+   {
+    "question": "_______ is the thicker fabric ribbing in the weave",
+    "choice1": "Taffeta",
+    "choice2": "tulle",
+    "choice3": "laces",
+    "choice4": "velvet",
+    "answer": 1
+   },
+   {
+    "question": "The hem falls right above the ankles",
+    "choice1": "mini",
+    "choice2": "floor",
+    "choice3": "ballerina",
+    "choice4": "street",
+    "answer": 3
+   },
+   {
+    "question": "________ is smooth, heavy and shin, long honoured bridal fibre",
+    "choice1": "satin",
+    "choice2": "chantilly",
+    "choice3": "tulle",
+    "choice4": "crepe",
+    "answer": 1
+   },
+   {
+    "question": "How many followers does Check Adigs have on Instagram?",
+    "choice1": "3K",
+    "choice2": "5K",
+    "choice3": "4K",
+    "choice4": "7K",
+    "answer": 3
+   },
+   {
+    "question": "What date was Check Adigs website launched?",
+    "choice1": "7th of August 2020",	
+    "choice2": "5th of June 2020",
+    "choice3": "10th of August 2020", 
+    "choice4": "20th of August 2020",
+    "answer": 3
+   },
+   {
+    "question": "What type of clothes does Check Adigs make?",
+    "choice1": "T-shirt, Polo, joggers and shorts",
+    "choice2": "tracksuit",
+    "choice3": "ankara",
+    "choice4": "kampala",
+    "answer": 1
+   },
+   {
+    "question": "Is Check Adigs an international or Nigeria company?",
+    "choice1": "Nigeria",
+    "choice2": "International",
+    "choice3": "Nigeria International",
+    "choice4": "regional",
+    "answer": 3
+   },
+   {
+    "question": "Check Adigs – Elegeance is not standing out but being ______?",
+    "choice1": "remembered",
+    "choice2": "unique",
+    "choice3": "exempted",
+    "choice4": "well known",
+    "answer": 1
+   },
+   {
+    "question": "Style is more about being _______?",
+    "choice1": "beautiful",
+    "choice2": "cute",
+    "choice3": "yourself",
+    "choice4": "copycat",
+    "answer": 3
+   },
+   {
+    "question": "What is the call line for Check Adigs?",
+    "choice1": "08130267643",
+    "choice2": "08065843658",
+    "choice3": "09044577875",
+    "choice4": "08067566789",
+    "answer": 1
+   },
+   {
+    "question": "Check Adigs first post on Instagram was made on which date/month/year?",
+    "choice1": "6th August",	
+    "choice2": "7th August",
+    "choice3": "6th September", 
+    "choice4": "7th September",
+    "answer": 1
+   },
+   {
+    "question": "What type of fabric is Check Adigs clothes made from?",
+    "choice1": "Crepe",
+    "choice2": "Cotton",
+    "choice3": "Satin",
+    "choice4": "nylon",
+    "answer": 2
+   },
+   {
+    "question": "Describe Check Adigs Clothing Line in one word",
+    "choice1": "A brand",
+    "choice2": "bag",
+    "choice3": "business",
+    "choice4": "estate agent",
+    "answer": 1
+   },
+   {
+    "question": "What is the name of a long piece of cloth worn by women over the shoulder?",
+    "choice1": "laid",
+    "choice2": "granville",
+    "choice3": "plaid",
+    "choice4": "sooth",
+    "answer": 1
+   },
+   {
+    "question": "What do you mean by Camlet also commonly known as Camelot or camblet in the fashion industry?",
+    "choice1": "the helmet on the king’s head",
+    "choice2": "the material in making the king’s cloth",
+    "choice3": "the waterproof cloth of camel’s hair",
+    "choice4": "the material in making the slave’s cloth",
+    "answer": 3
+   },
+   {
+    "question": "Who drafts the shapes and sizes of a garment’s pieces with paper and measuring tools",
+    "choice1": "stylist",
+    "choice2": "textile designer",
+    "choice3": "pattern maker",
+    "choice4": "tailor", 
+    "answer": 3
+   },
+   {
+    "question": "What is the name of strong shiny cotton?",
+    "choice1": "Poplin",	
+    "choice2": "violin",
+    "choice3": "foflin",
+    "choice4": "shint", 
+    "answer": 1
+   },
+   {
+    "question": "What is the colour of aquamarine, a precious stone?",
+    "choice1": "Bluish green",
+    "choice2": "pinkish",
+    "choice3": "greenish",
+    "choice4": "greenish blue",
+    "answer": 1
+   },
+   {
+    "question": "What is the name of the garment having a front opening?",
+    "choice1": "polero",
+    "choice2": "folero",
+    "choice3": "bolero",
+    "choice4": "dolero",
+    "answer": 3
+   },
+   {
+    "question": "Fedora lies in which category of accessories?",
+    "choice1": "a kind of cap",
+    "choice2": "a kind of feather",
+    "choice3": "a kind of clothing material",
+    "choice4": "a kind of weather",
+    "answer": 1
+   },
+   {
+    "question": "Which of the following is suitable for making evening gown?",
+    "choice1": "satin",
+    "choice2": "flannel",
+    "choice3": "garbardine",
+    "choice4": "silk tweet",
+    "answer": 1
+   },
+   {
+    "question": "A celebrity fashion designer from Florida born in Italy?",
+    "choice1": "Christian Dior",
+    "choice2": "Gianni Versace",
+    "choice3": "Giuseppi Zanotti",
+    "choice4": "Gucci",
+    "answer": 2 
+   },
+   {
+    "question": "Where was American fashion designer Liz Claiborne born?",
+    "choice1": "France",	
+    "choice2": "Germany",
+    "choice3": "Belgium",
+    "choice4": "Italy",
+    "answer": 3
+   },
+   {
+    "question": "What is the name of the ornament of the ankle?",
+    "choice1": "ankle chain",
+    "choice2": "anklet",
+    "choice3": "anklinks",
+    "choice4": "chains",
+    "answer": 2
+   },
+   {
+    "question": "Jacob W Davies in partnership Levi Strauss & Co invented a style of trousers called",
+    "choice1": "corduroy",
+    "choice2": "plaid",
+    "choice3": "jeans",
+    "choice4": "country jeans",
+    "answer": 3
+   },
+   {
+    "question": "A form of women’s loose dressing gown",
+    "choice1": "Negligee",
+    "choice2": "poncho",
+    "choice3": "overalls",
+    "choice4": "gown",
+    "answer": 1
+   },
+   {
+    "question": "Hometown of fashion designer Christian Dior is",
+    "choice1": "Granville",
+    "choice2": "Beaufort",
+    "choice3": "Galena",
+    "choice4": "California",
+    "answer": 1
+   },
+   {
+    "question": "A kind of decorative needlework",
+    "choice1": "applique",
+    "choice2": "crochet",
+    "choice3": "decors",
+    "choice4": "needlings",
+    "answer": 1
+   },
+   {
+    "question": "What is the name of skirt worn by men?",
+    "choice1": "tights",	
+    "choice2": "kilt",
+    "choice3": "skirt", 
+    "choice4": "pants",
+    "answer": 2
+   },
+   {
+    "question": "Ornamental needlework is called",
+    "choice1": "Embroidery",
+    "choice2": "needling",
+    "choice3": "ornament",
+    "choice4": "knitting",
+    "answer": 1
+   },
+   {
+    "question": "Short pants are basically briefs",
+    "choice1": "Yes",
+    "choice2": "No",
+    "choice3": "Maybe",
+    "choice4": "none of the above",
+    "answer": 1
+   },
+   {
+    "question": "A thin kind of silk is called",
+    "choice1": "linen",
+    "choice2": "polyester",
+    "choice3": "chiffon",
+    "choice4": "nylon",
+    "answer": 3
+   },
+   {
+    "question": "Bandana is worn tied around?",
+    "choice1": "the head or neck",
+    "choice2": "the waist or hips",
+    "choice3": "the wrists or ankles",
+    "choice4": "the head",
+    "answer": 1
+   },
+   {
+    "question": "Pyjamas are worn to bed",
+    "choice1": "no",
+    "choice2": "maybe",
+    "choice3": "yes",
+    "choice4": "none of the above",
+    "answer": 3
+   },
+   {
+    "question": "French fashion icon, Christian Marie Marc Lacroix was born in what year?",
+    "choice1": "1950",
+    "choice2": "1952",
+    "choice3": "1951",
+    "choice4": "1953",
+    "answer": 3
+   },
+   {
+    "question": "Who started fashion magazine for the first time?",
+    "choice1": "Samuel L. Jackson",
+    "choice2": "Samuel Beeson",
+    "choice3": "Liam Neeson",
+    "choice4": "Adigun Kehinde",
+    "answer": 2 
+   },
+   {
+    "question": "A beret is a kind of?",
+    "choice1": "shorts",
+    "choice2": "shirt",
+    "choice3": "cap",
+    "choice4": "head gear",
+    "answer": 3
+   },
+   {
+    "question": "A covering for the feet is known as?",
+    "choice1": "Socks",
+    "choice2": "tie",
+    "choice3": "lingerie",
+    "choice4": "clothing",
+    "answer": 1 
+   },
+   {
+    "question": "Babushka is a triangular headscarf tied by women under the chin",
+    "choice1": "yes",
+    "choice2": "no",
+    "choice3": "maybe",
+    "choice4": "all of the above",
+    "answer": 1
+   },
+   {
+    "question": "A round brimless head covering is a",
+    "choice1": "bonnet",
+    "choice2": "cap",
+    "choice3": "headnet",
+    "choice4": "clothing",
+    "answer": 1 
+   },
+   {
+    "question": "Fedora is a kind of accessory",
+    "choice1": "yes",
+    "choice2": "no",
+    "choice3": "maybe",
+    "choice4": "none of the above",
+    "answer": 1
+   },
+   {
+    "question": "ornament for the wrist is called?",
+    "choice1": "wristlet",
+    "choice2": "bracelet",
+    "choice3": "chain",
+    "choice4": "ring",
+    "answer": 2 
+   },
+   {
+    "question": "A short wide strip of fabric worn by men around the neck and tucked inside an open necked shirt is",
+    "choice1": "bandana",
+    "choice2": "cravat",
+    "choice3": "bolero",
+    "choice4": "all of the above",
+    "answer": 2
+   },
+   {
+    "question": "What do the initials stand for in fashion brand DKNY?",
+    "choice1": "Don Kenny New York",
+    "choice2": "Donna Karan New York",
+    "choice3": "Don Ken New York",
+    "choice4": "Dara knows New York",
+    "answer": 2 
+   },
+   {
+    "question": "The Kelly bag was named after which Hollywood actress?",
+    "choice1": "Grace Kelly",
+    "choice2": "Kelly Mali",
+    "choice3": "The Kelly",
+    "choice4": "Kelly Handsome",
+    "answer": 1
+   },
+   {
+    "question": "Who designed Victoria Beckham’s wedding dress?",
+    "choice1": "Christian Dior",
+    "choice2": "Gianni Versace",
+    "choice3": "Vivienne Westwood",
+    "choice4": "Vassace",
+    "answer": 3 
+   },
+   {
+    "question": "In the 1990s, famous model Naomi Campbell fell over on the catwalk while wearing Vivienne Westwood shoes",
+    "choice1": "true",
+    "choice2": "false",
+    "choice3": "couldn’t have happened",
+    "choice4": "I don’t know",
+    "answer": 1
+   },
+   {
+    "question": "How many times is London Fashion weekend held each year?",
+    "choice1": "once",
+    "choice2": "twice",
+    "choice3": "thrice",
+    "choice4": "four times",
+    "answer": 2 
+   }
+  ]
