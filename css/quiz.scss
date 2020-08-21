@@ -38,6 +38,7 @@ body {
   font-size: 1.2rem;
   margin: .5rem 0;
   border-radius: .3rem;
+  text-align: center;
 
   transition: 450ms ease-in-out;
   &:hover {
@@ -98,12 +99,15 @@ body {
         border: solid .2rem $c1;
         border-radius: 10rem;
         margin-top:  .5rem;
+        z-index: 1000;
       }
-
+      
       #progressBarFull {
+        overflow: hidden;
         height: 100%;
+        border-radius: 10rem;
         background-color: $c1;
-        width: 0%;
+        
       }
     }
 

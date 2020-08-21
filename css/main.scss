@@ -11,9 +11,11 @@ body {
 
 .header {
     display: flex;
+    flex-direction: row-reverse;
     width: 90%;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    height: 80vh;
 }
 
 header {
@@ -21,11 +23,23 @@ header {
     height: 100vh;
     background-color: $c2;
     display: flex;
-    flex-wrap: wrap-reverse;
+    // flex-wrap: wrap-reverse;
+    flex-direction: column;
     color: $c3;
     position: relative;
     align-items: center;
     justify-content: center;
+
+    .logo {
+        top: 10%;
+        // left: 10%;
+        position: absolute;
+        img {
+            height: auto;
+            width: 10%;
+        }
+      
+    }
 
     .order-button {
         padding: 1rem 2rem;
@@ -71,8 +85,11 @@ header {
         padding: 1rem 2rem;
         background-color: $c5;
         color: $c1;
+        position: relative;
         display: inline;
+        text-align: justify;
         justify-content: center;
+        // vertical-align: middle;
         align-items: center;
         border: 2px solid $c1;
         font-family: $f2;
@@ -82,8 +99,13 @@ header {
         letter-spacing: 1px;
         transition: 250ms ease-in-out;
 
+        img {
+            width: 1rem;
+            height: auto;
+        }
+
         i {
-            transition: 250ms ease-in-out;
+            transition: transform 250ms ease-in-out;
             font-size: 2rem;
             vertical-align: middle;            
             margin: .5rem;
@@ -101,12 +123,17 @@ header {
                 color: $c1;   
                 transform: translateX(10px) rotate(380deg);
             }
+
+            img {
+                transform: translateX(.5rem);
+            }
         }        
     }
 
     .point {
-        position: absolute;        
-        bottom: 5rem;
+        height: 20vh;
+        position: relative;        
+        // bottom: 5rem;
         i {
             font-size: 2rem;
             cursor: pointer;
@@ -126,13 +153,31 @@ header {
     }
 
     .left {
+        text-align: left;
+
+        // .actions {
+        //     display: flex;
+        //     flex-wrap: wrap;
+        // }
+        
         h1 {
             font-family: $f1;
         }
 
+         .center{
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .paras {
+            margin: 1.5rem 0;
+
+        }
+
         p {
             font-family: $f2;
-            margin: 2rem 0;
+            margin: 0rem 0;
+            // text-align: center;
             font-size: 1.2rem;
         }
     }
@@ -140,7 +185,7 @@ header {
     .right {
         img {
             height: auto;
-            width: 100%;
+            width: 80%;
         }
     }
 
@@ -231,6 +276,8 @@ footer {
         color: $c1;
     }
 
+
+    
     .icons, .phone {
         .links {
             text-decoration: none;     
@@ -265,9 +312,16 @@ footer {
     }
 
     .text {
+        display: inline;
+        text-align: center;
         span {
             color: $c1;
             font-weight: 600;
+        }
+
+        img {
+            height: auto;
+            width: 1.5rem;
         }
     }
 
@@ -294,14 +348,16 @@ footer {
     .header {
         display: flex;
         justify-content: center;
-        .right {
-            display: none;
-        }
+        flex-direction: column-reverse;
+        // .right {
+        //     display: none;
+        // }
        
     }
 }
 
 @media (min-width: 501px) and (max-width: 700px) {
+    
     header {    
         text-align: center;
         padding-bottom: 2rem;
@@ -325,6 +381,31 @@ footer {
 }
 
 @media (min-width: 320px) and (max-width: 500px) {
+
+    header {
+        .left h1 {
+            text-align: center;
+        }
+
+        .left p {
+            text-align: center;
+            line-height: 1.5rem;
+            color: lighten($c1, 5%);
+        }
+        
+    }
+
+    .actions {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        a {
+            margin: .5rem 0;
+            text-align: center;
+
+        }
+    }
     header {
         padding-bottom: calc(100%/6.5);
         text-align: center;

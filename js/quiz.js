@@ -75,7 +75,7 @@ fetch(baseURL)
 
 
 const CORRECT_BONUS = 1;
-const MAX_QUESTIONS = 5;
+const MAX_QUESTIONS = 3;
 let time = 10
 
 startGame = () => {
@@ -102,15 +102,25 @@ startGame = () => {
 
 
 // questionCounter++;
-const countDown = setInterval(() => {
-  time-- 
-  timeText.innerHTML = `${time} secs`
-  if (time == 0) {
-    time = 16
-    getNewQuestion()
-  }
+// const countDown = setInterval(() => {
+//   time-- 
+//   timeText.innerHTML = `${time} secs`
+//   if (time == 0) {
+//     time = 16
+//     getNewQuestion()
+//   }
 
-}, 1000);
+// }, 1000);
+
+incrementScore = num => {
+  score += num;
+  scoreText.innerText = score;
+}
+
+decrementScore = num => {
+  score-= num;
+  scoreText.innerText = score;
+}
 
 getNewQuestion = () => {
   // if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
@@ -130,10 +140,11 @@ getNewQuestion = () => {
 
   questionCounter++
   progressText.innerText = `Question: ${questionCounter}/${MAX_QUESTIONS}`
-  // console.log((questionCounter / MAX_QUESTIONS) * 100);
+  
   const quizProgress = `${(questionCounter / MAX_QUESTIONS)  * 100 }`
-  // console.log(quizProgress);
+
   progressBarFull.style.width = `${quizProgress}%`
+
 
   
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);  
@@ -148,9 +159,9 @@ getNewQuestion = () => {
     choice.innerHTML = currentQuestion["choice" + number];    
     
   });
-  // setInterval(() => {
+  setInterval(() => {
     
-  // }, 100);
+  }, 100);
 // console.log(availableQuestions);
 
   availableQuestions.splice(questionIndex, 1);
@@ -166,6 +177,7 @@ choices.forEach(choice => {
 
     // timeText = time;
     acceptingAnswers = false;
+    time = 16;
     const selectedChoice = e.target;
     const selectedAnswer = selectedChoice.dataset["number"];
     const isCorrect = selectedAnswer == currentQuestion.answer;
@@ -189,14 +201,6 @@ choices.forEach(choice => {
   });
 });
 
-incrementScore = num => {
-  score += num;
-  scoreText.innerText = score;
-}
 
-decrementScore = num => {
-  score-= num;
-  scoreText.innerText = score;
-}
 
 startGame();

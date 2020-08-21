@@ -34,6 +34,7 @@ body {
   font-size: 1.2rem;
   margin: .5rem 0;
   border-radius: .3rem;
+  text-align: center;
   -webkit-transition: 450ms ease-in-out;
   transition: 450ms ease-in-out;
 }
@@ -113,12 +114,14 @@ body {
   border: solid 0.2rem #F36B2B;
   border-radius: 10rem;
   margin-top: .5rem;
+  z-index: 1000;
 }
 
 .quiz-game .container #hud #progressBarFull {
+  overflow: hidden;
   height: 100%;
+  border-radius: 10rem;
   background-color: #F36B2B;
-  width: 0%;
 }
 
 .quiz-game .container #question {

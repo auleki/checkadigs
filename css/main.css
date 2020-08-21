@@ -20,13 +20,17 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   width: 90%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 80vh;
 }
 
 header {
@@ -35,8 +39,10 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap-reverse;
-      flex-wrap: wrap-reverse;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: #6A6A6A;
   position: relative;
   -webkit-box-align: center;
@@ -45,6 +51,16 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+header .logo {
+  top: 10%;
+  position: absolute;
+}
+
+header .logo img {
+  height: auto;
+  width: 10%;
 }
 
 header .order-button {
@@ -99,7 +115,9 @@ header .out-button {
   padding: 1rem 2rem;
   background-color: #FFFFFF;
   color: #F36B2B;
+  position: relative;
   display: inline;
+  text-align: justify;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -116,9 +134,16 @@ header .out-button {
   transition: 250ms ease-in-out;
 }
 
+header .out-button img {
+  width: 1rem;
+  height: auto;
+}
+
 header .out-button i {
-  -webkit-transition: 250ms ease-in-out;
-  transition: 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
   font-size: 2rem;
   vertical-align: middle;
   margin: .5rem;
@@ -139,9 +164,14 @@ header .out-button:hover i, header .out-button:active i {
           transform: translateX(10px) rotate(380deg);
 }
 
+header .out-button:hover img, header .out-button:active img {
+  -webkit-transform: translateX(0.5rem);
+          transform: translateX(0.5rem);
+}
+
 header .point {
-  position: absolute;
-  bottom: 5rem;
+  height: 20vh;
+  position: relative;
 }
 
 header .point i {
@@ -163,19 +193,32 @@ header .point i:hover {
   opacity: 1;
 }
 
+header .left {
+  text-align: left;
+}
+
 header .left h1 {
   font-family: Chivo;
 }
 
+header .left .center {
+  text-align: center;
+  font-weight: 800;
+}
+
+header .left .paras {
+  margin: 1.5rem 0;
+}
+
 header .left p {
   font-family: "Roboto Condensed";
-  margin: 2rem 0;
+  margin: 0rem 0;
   font-size: 1.2rem;
 }
 
 header .right img {
   height: auto;
-  width: 100%;
+  width: 80%;
 }
 
 @-webkit-keyframes hover {
@@ -332,9 +375,19 @@ footer .phone .links:hover {
   color: #7e6e6e;
 }
 
+footer .text {
+  display: inline;
+  text-align: center;
+}
+
 footer .text span {
   color: #F36B2B;
   font-weight: 600;
+}
+
+footer .text img {
+  height: auto;
+  width: 1.5rem;
 }
 
 @media (max-width: 600px) {
@@ -365,9 +418,10 @@ footer .text span {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-  .header .right {
-    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
 }
 
@@ -390,6 +444,28 @@ footer .text span {
 }
 
 @media (min-width: 320px) and (max-width: 500px) {
+  header .left h1 {
+    text-align: center;
+  }
+  header .left p {
+    text-align: center;
+    line-height: 1.5rem;
+    color: #f47c43;
+  }
+  .actions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .actions a {
+    margin: .5rem 0;
+    text-align: center;
+  }
   header {
     padding-bottom: calc(100%/6.5);
     text-align: center;
