@@ -22,6 +22,9 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -77,23 +80,56 @@ nav .navbar .links:nth-child(1) {
           flex-direction: row;
 }
 
-nav .navbar .dropbtn {
+nav .navbar .dropdown {
   position: relative;
 }
 
-nav .navbar .dropbtn:hover .dropdown_menu {
-  display: none;
+nav .navbar .dropbtn {
+  -webkit-transition: 450ms ease-in-out;
+  transition: 450ms ease-in-out;
+  z-index: 100;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
 }
 
-nav .navbar .dropbtn:hover .dropdown_menu {
-  display: none;
+nav .navbar .dropbtn ion-icon {
+  margin: 0 .2rem;
+}
+
+nav .navbar .dropbtn:hover {
+  color: #F36B2B;
+}
+
+nav .navbar .dropbtn:hover ion-icon {
+  color: #F36B2B;
+}
+
+nav .navbar .dropdown:hover .dropdown_menu {
+  display: block;
 }
 
 nav .navbar .dropdown_menu {
-  top: 10%;
-  left: 58%;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
+  display: none;
+  z-index: 100;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+}
+
+nav .navbar .dropdown_menu .menu_items {
+  text-decoration: none;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  background-color: #FFFFFF;
+  -webkit-transition: 350ms ease-in-out;
+  transition: 350ms ease-in-out;
+  color: #F36B2B;
+}
+
+nav .navbar .dropdown_menu .menu_items:hover {
+  background-color: #F36B2B;
+  color: #FFFFFF;
 }
 
 nav .navbar .links {
@@ -106,24 +142,15 @@ nav .navbar .links {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: 450ms ease-in-out;
-  transition: 450ms ease-in-out;
-}
-
-nav .navbar .links ion-icon {
-  margin: 0 .2rem;
 }
 
 nav .navbar .links:hover {
   color: #F36B2B;
-}
-
-nav .navbar .links:hover ion-icon {
-  color: #F36B2B;
+  -webkit-text-decoration: wavy;
+          text-decoration: wavy;
 }
 
 nav .navbar li {
-  color: #FFFFFF;
   margin: 0 .5rem;
   display: -webkit-box;
   display: -ms-flexbox;

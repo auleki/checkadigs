@@ -20,6 +20,7 @@ body {
 nav {
     padding: 1rem;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     background-color: darken($c5, 90%);
     color: $c5;
@@ -64,28 +65,67 @@ nav {
             flex-direction: row;
         }
 
-        .dropbtn {
+        .dropdown {
             position: relative;
+        }
+
+        .dropbtn {
+            // position: relative;
+            transition: 450ms ease-in-out;
+            z-index: 100;
+            perspective: 1000px;
+            ion-icon {
+                margin: 0 .2rem;
+            }
 
             &:hover {
-                .dropdown_menu {
-                    display: none;
+                color: $c1;
+                ion-icon {
+                    color: $c1;
+                    // transform: translateX(.5rem);
+                }
+                
+            }
+        }
+
+        .dropdown:hover .dropdown_menu {
+            display: block;
+        }
+        
+        .dropdown_menu {                
+            display: none;
+            z-index: 100;
+            position: absolute;
+            top: 100%;
+            left: 0%;
+            .menu_items {
+                // color: $c5;
+                text-decoration: none;
+                padding: 1rem;
+                text-align: center;
+                width: 100%;
+                background-color: $c5;
+                transition: 350ms ease-in-out;
+                color: $c1;
+                &:hover {
+                    background-color: $c1;
+                    color: $c5;
                 }
             }
         }
 
-        .dropbtn:hover .dropdown_menu {
-            display: none;
-        }
+        // .dropbtn:hover .dropdown_menu {
+        //     display: none;
+        // }
 
-        .dropdown_menu {
-            // display: none;
-            // position: absolute;    
-            top: 10%;
-            left: 58%;
-            perspective: 1000px;
+        // .dropdown_menu {
+        //     // display: none;
+        //     // position: absolute;    
+        //     top: 10%;
+        //     left: 58%;
+        //     perspective: 1000px;
 
-        }
+        // }
         
 
         .links {
@@ -95,20 +135,21 @@ nav {
             text-decoration: none;
             display: flex;
             align-items: center;
-            transition: 450ms ease-in-out;
-            ion-icon {
-                margin: 0 .2rem;
-            }
+            // transition: 450ms ease-in-out;
+            // ion-icon {
+            //     margin: 0 .2rem;
+            // }
             &:hover {
                 color: $c1;
-                ion-icon {
-                    color: $c1;
-                    // transform: translateX(.5rem);
-                }
+                text-decoration: wavy;
+                // ion-icon {
+                //     color: $c1;
+                //     // transform: translateX(.5rem);
+                // }
             }
         }
         li {
-            color: $c5;
+            // color: $c5;
             margin: 0 .5rem;
             display: flex;
             align-items: center;
