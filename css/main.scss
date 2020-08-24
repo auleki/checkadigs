@@ -7,6 +7,7 @@ html {
 body {
     background-color: $c4;
     color: $c5;
+    overflow-x: hidden;
     font-family: $f1;
     
 }
@@ -24,7 +25,7 @@ nav {
     justify-content: space-between;
     background-color: darken($c5, 90%);
     color: $c5;
-    // position: sticky;
+    position: sticky;
     top: 0;
     z-index: 1000;
     
@@ -60,10 +61,10 @@ nav {
         display: flex;
         // background-color: #fff;
         list-style-type: none;
-        .links:nth-child(1) {
-            display: flex;
-            flex-direction: row;
-        }
+        // .links:nth-child(1) {
+        //     display: flex;
+        //     flex-direction: row;
+        // }
 
         .dropdown {
             position: relative;
@@ -469,11 +470,77 @@ header {
 // }
 
 
+.newsletter {
+    // position: absolute;
+    background-color: $c1;
+    width: 100%;
+    padding: 1rem 0;
+    margin: 5rem 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // border-radius: 1rem;
+    h3 {
+        padding: 2rem 0 0;
+        font-size: 1.5rem;
+    }
+    
+    .form_group {
+        display: flex;
+        .placeholder {
+            // padding: 1rem; 
+            padding: .8rem;
+            background-color: $c4;
+            color: $c5;
+        }
+
+        .send {
+            padding: .8rem;
+            background-color: rgb(48, 247, 98);
+            color: $c5;
+            transition: 250ms ease-in-out;
+            font-family: 1.3rem;
+            vertical-align: middle;
+            ion-icon {
+                vertical-align: middle;
+            }
+
+            &:hover {
+                background-color: $c5;
+                color: $c1;
+                cursor: pointer;
+            }
+        }
+
+        input {
+            padding: 1rem;
+            background-color: lighten($c4, 15%);
+            border: none;
+            font-size: 1rem;
+            outline: none;
+
+            &:focus {
+                color: $c5;
+            }
+
+        }
+    }
+
+
+    .subscribe {
+        margin: 1rem 0;
+
+    }
+}
+
+
 footer {
     // margin-top: 5rem;
     background-color: $c4;
     padding: 1rem;
     display: flex;
+    position: relative;
     // flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
@@ -484,6 +551,7 @@ footer {
     }
 
 
+    
     
     .icons, .phone {
         .links {
@@ -540,7 +608,14 @@ footer {
 
 
     nav {
-        position: relative;
+        // position: relative;
+        width: 100%;
+        
+        .links {
+            font-size: 1.3rem;
+            text-align: center;
+            
+        }
         .navbar {
             background-color: darken($c5, 90%);
             display: none;
@@ -550,6 +625,34 @@ footer {
             width: 100%;
             left: 0;
             flex-direction: column;
+
+           
+    
+
+            .dropdown {
+                // background-color: #fff;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                // justify-content: flex-start;
+            }
+
+            .dropdown_menu {
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                position: relative;
+
+                .menu_items {
+                    font-size: 1.1rem;
+
+                    background-color: transparent;
+                    &:hover {
+                        background-color: transparent;
+                        
+                    }
+                }
+            }
         }
 
         .responsive {
