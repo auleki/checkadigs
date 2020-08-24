@@ -31,10 +31,10 @@ nav {
     .hamburger {
         position: absolute;
         display: none;
-        right: .3rem;
+        right: .5rem;
         top: .3rem;
         ion-icon {
-            font-size: 2.5rem;
+            font-size: 2rem;
             transition: 300ms ease-in ;
             border-radius: 3rem;
             padding: .5rem;
@@ -538,6 +538,28 @@ footer {
 
 @media (max-width: 600px) {
 
+
+    nav {
+        position: relative;
+        .navbar {
+            background-color: darken($c5, 90%);
+            display: none;
+            // display: flex;
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            left: 0;
+            flex-direction: column;
+        }
+
+        .responsive {
+            display: flex;
+        }
+
+        .hamburger {
+            display: block;
+        }
+    }
 
     .owl-carousel{
         .item {

@@ -37,12 +37,12 @@ nav {
 nav .hamburger {
   position: absolute;
   display: none;
-  right: .3rem;
+  right: .5rem;
   top: .3rem;
 }
 
 nav .hamburger ion-icon {
-  font-size: 2.5rem;
+  font-size: 2rem;
   -webkit-transition: 300ms ease-in;
   transition: 300ms ease-in;
   border-radius: 3rem;
@@ -565,6 +565,29 @@ footer .text img {
 }
 
 @media (max-width: 600px) {
+  nav {
+    position: relative;
+  }
+  nav .navbar {
+    background-color: #1a1a1a;
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  nav .responsive {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  nav .hamburger {
+    display: block;
+  }
   .owl-carousel .item {
     width: 100%;
   }
