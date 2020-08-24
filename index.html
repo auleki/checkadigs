@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CheckADigs</title>
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.theme.green.min.css">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/main.css">
@@ -12,13 +15,58 @@
     
 </head>
 <body>
-   <header>
-    <div class="header">
-
+    
+    <nav>
+        <div class="logo">
+            <img src="images/CA Logo.png" alt="logo">
+        </div>
+      
+        <div class="hamburger">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
+        <ul class="navbar">
+            
+            <li>
+                <a href="#" class="links dropbtn">
+                    Categories
+                    <ion-icon name="caret-down-outline"></ion-icon>
+                </a>
+                <ul class="dropdown_menu">
+                    <li class=""><a href="">Joggers</a></li>
+                    <li class=""><a href="">Sweatshirt</a></li>
+                    <li class=""><a href="">Poloshirt</a></li>
+                    <li class=""><a href="">Shorts</a></li>
+                    <li class=""><a href="">RoundNeck T-shirt</a></li>
+                    <li class=""><a href="">Joggers</a></li>
+                </ul>
+            </li>
+            <li><a href="" class="links">About Us</a></li>
+            <li><a href="" class="links">Quiz</a></li>
+            <li><a href="" class="links">Contact Us</a></li>
+            <!-- <li><a href="" class="dropdown dropdown-6 links">Categories</a>
+                <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-6">
+                    <li class="dropdown_item-1"><a href="">Joggers</a></li>
+                    <li class="dropdown_item-2"><a href="">Sweatshirt</a></li>
+                    <li class="dropdown_item-3"><a href="">Poloshirt</a></li>
+                    <li class="dropdown_item-4"><a href="">Shorts</a></li>
+                    <li class="dropdown_item-5"><a href="">RoundNeck T-shirt</a></li>
+                    <li class="dropdown_item-6"><a href="">Joggers</a></li>
+                </ul>
+            </li>
+            <li><a href="" class="links">About Us</a></li>
+            <li><a href="" class="links">Quiz</a></li>
+            <li><a href="" class="links">Contact Us</a></li> -->
+      
+        </ul>
+      </nav>
+      
+      <header>
+      <div class="header">
+      
         <!-- <div class="logo">
             <img src="images/CA Logo.png" alt="logo">
         </div> -->
-
+      
         <div class="left wow fadeInRightBig">
             <h1>We are launching soon</h1>
             <div class="paras">
@@ -35,107 +83,218 @@
              >
                  <span>Place Order</span><i class="lab la-whatsapp"></i>
              </a>
- 
+      
              <a href="./quiz.html" class="out-button">
-                 <span>Quiz Coming Soon</span>
-    
+                 <span>Giveaway Quiz</span>
+      
              </a>
- 
+      
             </div>
             
         </div>
- 
+      
         <div class="right wow fadeInDownBig">
             <!-- <img src="images/fashion-business.png" alt="header graphic"> -->
             <img src="images/CA Logo.png" alt="logo">
         </div> 
                
-    </div>
+      </div>
        
        <div class="point">
         <i id="word" class="las la-angle-double-down"></i>
        </div>
-
-   </header>
-
-   <main>
-       <section id="genesis" class="bg-left wow fadeInUpBig reverse">
-           <div class="text wow fadeInLeftBig">
-               <p>WHO DOESNT LIKE THEIR <span>MONEY</span> WHERE THEY CAN SEE IT, HANGING IN THE CLOSET</p>
+      
+      </header>
+      
+      <main>
+       <!-- <section id="genesis" class="bg-left wow fadeInUpBig reverse">
+           
+       </section> -->
+      
+       <section id="genesis" class="wow fadeInUpBig category">
+           <div class="title">
+               <h2>Sweatshirts</h2>
            </div>
-           <div class="image">
-               <img src="images/shirt-1.png" alt="shirt 1" srcset="">
-           </div>
+      
+           <div class="owl-carousel owl-theme">
+               <div class="item">
+                   <img src="images/sweat01-removebg.png" alt="" srcset="">
+               </div>
+
+               <div class="item">
+                   <img src="images/sweat02 1t.png" alt="" srcset="">
+               </div>
+
+               <div class="item">
+                    <img src="images/sweat03 1.png" alt="" srcset="">
+               </div>
+               
+               <div class="item">
+                    <img src="images/sweat04 1.png" alt="" srcset="">
+               </div>  
+
+               <div class="item">
+                    <img src="images/sweat05 1.png" alt="" srcset="">
+               </div>
+
+           </div>          
+      
        </section>
+      
+       <section class="wow fadeInUpBig category">
+        <div class="title">
+            <h2>Shorts</h2>
+        </div>
+   
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <img src="images/short01 1.png" alt="" srcset="">
+            </div>
 
-       <section class="bg-right wow fadeInUpBig wrap">
-           <div class="image">
-               <img src="images/shirt-2.png" alt="shirt 2" srcset="">
-           </div>
-           <div class="text wow fadeInRightBig">
-               <p><span>CHECK ADIGS</span> DON’T JUST DESIGN CLOTHES, WE DESIGN STYLE AND TREND </p>
-           </div>
-       </section>
+            <div class="item">
+                <img src="images/short02 1.png" alt="" srcset="">
+            </div>
 
-       <section class="bg-left wow fadeInUpBig reverse">
-           <div class="text wow fadeInLeftBig">
-               <p>FASHION IS ABOUT DRESSING ACCORDING TO WHAT’S FASHIONABLE AND STYLE IS MORE ABOUT BEING <span>YOURSELF</span></p>
-           </div>
-           <div class="image">
-               <img src="images/shirt-3.png" alt="shirt 3" srcset="">
-           </div>
-       </section>
+            <div class="item">
+                 <img src="images/short03 1.png" alt="" srcset="">
+            </div>
+            
+            <div class="item">
+                 <img src="images/short04 1.png" alt="" srcset="">
+            </div>  
 
-       <section class="bg-right wow fadeInUpBig wrap">
-           <div class="image">
-               <img src="images/shirt-4.png" alt="shirt 4" srcset="">
-           </div>
+            <div class="item">
+                 <img src="images/short05 1.png" alt="" srcset="">
+            </div>
 
-           <div class="text wow fadeInRightBig">
-               <p><span>CHECK ADIGS</span> BRINGS THE BEST OF QUALITY MATERIALS  TO EVERYONE’S 
-                DOORSTEP WORLDWIDE
-                </p>
-           </div>
-       </section>
+        </div>          
+   
+        </section>
 
-       <section class="bg-left wow fadeInUpBig reverse">
-           <div class="text wow fadeInLeftBig">
-               <p>AT <span>CHECK ADIGS</span> WE MAKE SURE ALL CUSTOMERS NEVER WORRY ABOUT SHABBY LOOKS OR WARDROBE MALFUNCTIONS</p>
-           </div>
+        <section class="category wow fadeInUpBig">
+            <div class="title">
+                <h2>Poloshirts</h2>
+            </div>
+    
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <img src="images/polo01 1.png" alt="" srcset="">
+                </div>
 
-           <div class="image">
-               <img src="images/shirt-5.png" alt="shirt 5"  srcset="">
-           </div>
-       </section>
-   </main>
+                <div class="item">
+                    <img src="images/polo02 1.png" alt="" srcset="">
+                </div>
 
-   <footer class="wow fadeIn">
+                <div class="item">
+                    <img src="images/polo03 1.png" alt="" srcset="">
+                </div>
+                
+                <div class="item">
+                    <img src="images/polo04 1.png" alt="" srcset="">
+                </div>  
+
+                <div class="item">
+                    <img src="images/polo05 1.png" alt="" srcset="">
+                </div>
+
+                <div class="item">
+                    <img src="images/polo06 1.png" alt="" srcset="">
+            </div>
+
+
+            </div>          
+    
+        </section>
+
+        <section class="category wow fadeInUpBig">
+            <div class="title">
+                <h2>T-Shirts</h2>
+            </div>
+    
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <img src="images/shirt01 1.png" alt="" srcset="">
+                </div>
+
+                <div class="item">
+                    <img src="images/shirt02 1.png" alt="" srcset="">
+                </div>
+
+                <div class="item">
+                    <img src="images/shirt03 1.png" alt="" srcset="">
+                </div>
+                
+                <div class="item">
+                    <img src="images/shirt04 1.png" alt="" srcset="">
+                </div>  
+
+                <div class="item">
+                    <img src="images/shirt05 1.png" alt="" srcset="">
+                </div>
+
+                <div class="item">
+                    <img src="images/shirt06 1.png" alt="" srcset="">
+            </div>
+
+            </div>          
+    
+        </section>
+
+        <section class="category wow fadeInUpBig">
+            <div class="title">
+                <h2>Joggers</h2>
+            </div>
+    
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <img src="images/joggers01 1.png" alt="" srcset="">
+                </div>
+
+                <div class="item">
+                    <img src="images/joggers02 1.png" alt="" srcset="">
+                </div>
+
+                
+            </div>          
+    
+        </section>
+
+      </main>
+      
+      <footer class="wow fadeIn">
        <div class="icons">
            <a href="https://instagram.com/check_adigs" target="_blank" rel="noreferrer" class="links">
             <i class="lab la-instagram"></i>
            </a>
-
+      
            <a href="https://twitter.com/check_adigs" target="_blank" rel="noreferrer" class="links">
             <i class="lab la-twitter"></i>
            </a>
-
+      
            <a href="https://www.facebook.com/Check_adigs-109195790858649" target="_blank" rel="noreferrer" class="links">
             <i class="lab la-facebook-f"></i>
            </a>       
        </div>
-
+      
        <div class="text">
            <p>Powered by <span>Check Adigs</span></p> 
            <!-- <img src="images/CA Logo.png" alt="logo" srcset=""> -->
        </div>
-
+      
        <div class="phone">
            <a class="links" href="tel:+2348130267643">
                <i class="las la-phone"></i><span>+2348130267643</span>
             </a>
        </div>
-   </footer>
+      </footer>
 
+   <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+    </script>
+    <script src="js/owl.carousel.min.js"></script>
+   <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
    <script async src="js/wow.min.js"></script>
    <script async src="js/startWow.js"></script>
    <script async src="js/main.js"></script>
