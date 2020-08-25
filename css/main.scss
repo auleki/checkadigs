@@ -33,23 +33,34 @@ nav {
         position: absolute;
         display: none;
         right: .5rem;
+        transition: background-color 300ms ease-in ;
         top: .3rem;
+        background-color: $c5;
         ion-icon {
             font-size: 2rem;
             transition: 300ms ease-in ;
-            border-radius: 3rem;
+            // border-radius: 3rem;
             padding: .5rem;
-            color: lighten($c5, 30%);
+            color: $c4;
             &:hover {
-                background-color: $c2;
-                transform: translateY(.3rem);
+                // background-color: $c2;
+                // transform: translateY(.3rem);
                 color: $c1;
                 cursor: pointer;
             }
         }
+
+        &:hover {
+            background-color: $c4;
+        }
     }
 
     .logo {
+
+        h1 {
+            font-family: $f3;
+        }
+
         img {
             height: auto;
             width: 2.5rem;
@@ -154,6 +165,7 @@ nav {
             margin: 0 .5rem;
             display: flex;
             align-items: center;
+            justify-content: center;
             // a {
             //     text-decoration: none;
             //     // background: #C06162;
@@ -484,6 +496,7 @@ header {
     h3 {
         padding: 2rem 0 0;
         font-size: 1.5rem;
+        text-align: center;
     }
     
     .form_group {
@@ -493,25 +506,33 @@ header {
             padding: .8rem;
             background-color: $c4;
             color: $c5;
+            font-size: 1.5rem;
         }
 
         .send {
             padding: .8rem;
-            background-color: rgb(48, 247, 98);
-            color: $c5;
+            color: $c4;
             transition: 250ms ease-in-out;
-            font-family: 1.3rem;
+            font-size: 1.5rem;
+            background-color: $c5;
             vertical-align: middle;
             ion-icon {
                 vertical-align: middle;
             }
-
+            
             &:hover {
-                background-color: $c5;
-                color: $c1;
+                background-color: rgb(48, 247, 98);
+                color: $c4;
                 cursor: pointer;
             }
+
+            &:disabled {
+                background-color: rgb(233, 233, 233);
+                opacity: .7;
+            }
         }
+
+        
 
         input {
             padding: 1rem;
@@ -605,7 +626,6 @@ footer {
 }
 
 @media (max-width: 600px) {
-
 
     nav {
         // position: relative;
@@ -739,6 +759,13 @@ footer {
             line-height: 1.5rem;
             color: lighten($c1, 5%);
         }
+
+        .right {
+            img {
+                width: 40%;
+                height: auto;
+            }
+        }
         
     }
 
@@ -750,6 +777,7 @@ footer {
         a {
             margin: .5rem 0;
             text-align: center;
+            padding: .5rem 1.5rem;
 
         }
     }

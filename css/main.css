@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chivo&family=Roboto+Condensed:wght@400;700&display=swap");
 * {
   padding: 0;
@@ -41,24 +42,31 @@ nav .hamburger {
   position: absolute;
   display: none;
   right: .5rem;
+  -webkit-transition: background-color 300ms ease-in;
+  transition: background-color 300ms ease-in;
   top: .3rem;
+  background-color: #FFFFFF;
 }
 
 nav .hamburger ion-icon {
   font-size: 2rem;
   -webkit-transition: 300ms ease-in;
   transition: 300ms ease-in;
-  border-radius: 3rem;
   padding: .5rem;
-  color: white;
+  color: #1f1b1b;
 }
 
 nav .hamburger ion-icon:hover {
-  background-color: #F4F4F4;
-  -webkit-transform: translateY(0.3rem);
-          transform: translateY(0.3rem);
   color: #F36B2B;
   cursor: pointer;
+}
+
+nav .hamburger:hover {
+  background-color: #1f1b1b;
+}
+
+nav .logo h1 {
+  font-family: "Allerta Stencil";
 }
 
 nav .logo img {
@@ -151,6 +159,9 @@ nav .navbar li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 nav .navbar li .dropdown {
@@ -505,6 +516,7 @@ header .right img {
 .newsletter h3 {
   padding: 2rem 0 0;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 .newsletter .form_group {
@@ -517,15 +529,16 @@ header .right img {
   padding: .8rem;
   background-color: #1f1b1b;
   color: #FFFFFF;
+  font-size: 1.5rem;
 }
 
 .newsletter .form_group .send {
   padding: .8rem;
-  background-color: #30f762;
-  color: #FFFFFF;
+  color: #1f1b1b;
   -webkit-transition: 250ms ease-in-out;
   transition: 250ms ease-in-out;
-  font-family: 1.3rem;
+  font-size: 1.5rem;
+  background-color: #FFFFFF;
   vertical-align: middle;
 }
 
@@ -534,9 +547,14 @@ header .right img {
 }
 
 .newsletter .form_group .send:hover {
-  background-color: #FFFFFF;
-  color: #F36B2B;
+  background-color: #30f762;
+  color: #1f1b1b;
   cursor: pointer;
+}
+
+.newsletter .form_group .send:disabled {
+  background-color: #e9e9e9;
+  opacity: .7;
 }
 
 .newsletter .form_group input {
@@ -757,6 +775,10 @@ footer .text img {
     line-height: 1.5rem;
     color: #f47c43;
   }
+  header .right img {
+    width: 40%;
+    height: auto;
+  }
   .actions {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -770,6 +792,7 @@ footer .text img {
   .actions a {
     margin: .5rem 0;
     text-align: center;
+    padding: .5rem 1.5rem;
   }
   header {
     padding-bottom: calc(100%/6.5);

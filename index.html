@@ -251,15 +251,21 @@
       <div class="newsletter">
         <h3>Subscribe to get on our mailing list</h3>
         <div class="subscribe">
-            <div class="form_group">
-                <span class="placeholder">@</span>
-                <input type="email" name="email" id="email" required placeholder="type in your email address" autocomplete="off">
-                <span class="send"><ion-icon name="navigate-outline"></ion-icon></span>
-            </div>
+            <form 
+                id="subscribeForm" 
+                //action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdOXjyiKO1fefKYz3N1SypBdl6LApPjXr3ByOoRTuMLJiBGOQ/formResponse"
+                >
+                <div class="form_group">
+                    <span class="placeholder">@</span>
+                    <input type="email" jsname="YPqjbf" name="YPqjbf" id="email" placeholder="type in your email address" autocomplete="off">
+                    <button type="submit" id="subscribeBtn" class="send"><ion-icon name="enter-outline"></ion-icon></button>
+                </div>
+            </form>
+            
 
-            <div class="form_group">
+            <!-- <div class="form_group">
                 <button type="submit"></button>
-            </div>
+            </div> -->
         </div>
     </div>
       
@@ -300,8 +306,8 @@
     </script>
     <script src="js/owl.carousel.min.js"></script>
    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
-   <script async src="js/wow.min.js"></script>
-   <script async src="js/startWow.js"></script>
-   <script async src="js/main.js"></script>
+   <script defer src="js/wow.min.js"></script>
+   <script src="js/startWow.js"></script>
+   <script src="js/main.js"></script>
 </body>
 </html>

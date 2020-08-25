@@ -4,6 +4,9 @@ const word = document.getElementById("word");
 const genesis = document.getElementById("genesis");
 const navbar = document.querySelector('.navbar');
 const burger = document.querySelector('.hamburger');
+let emailInput = document.getElementById("email");
+// const subscribeBtn = document.getElementById("subscribeBtn");
+const subscribeForm = document.getElementById("subscribeForm");
 
 
 
@@ -21,16 +24,18 @@ burger.addEventListener('click', makeResponive)
 
 // CLOSE MENU 
 
-
-
-
+// shouldDisable = (input) => {
+//     if (input.value != '') {
+//         subscribeBtn.disabled = false
+//     } else {
+//         subscribeBtn.disabled = true
+//     }
+// }
+// shouldDisable(emailInput)
 
 word.addEventListener("click", () => {
     genesis.scrollIntoView();
 })
-
-
-
 
 $(document).ready(function() {
     $(".owl-carousel").owlCarousel({
@@ -56,3 +61,10 @@ $(document).ready(function() {
         }
     });
 });
+
+
+subscribeForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    emailInput.value = ''
+    console.log('Form Submitted');
+})
