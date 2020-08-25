@@ -65,6 +65,6 @@ $(document).ready(function() {
 
 subscribeForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    console.log(emailInput.value);
     emailInput.value = ''
-    console.log('Form Submitted');
 })

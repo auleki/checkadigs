@@ -431,6 +431,7 @@ header {
 }
 
 .category {
+
     .title {
         margin: 5rem;
         h2 {
@@ -443,6 +444,20 @@ header {
             
         }
     }
+
+    .item {
+        position: relative;
+    }
+
+    .price {
+        padding: .5rem;
+        background-color: $c1;
+        color: $c5;
+        border-radius: .3rem;
+        position: absolute;
+        top: 0;
+    }
+
 }
 
 // section {
@@ -749,6 +764,16 @@ footer {
 
 @media (min-width: 320px) and (max-width: 500px) {
 
+    .category {
+
+        .price {
+            left: 1rem;    
+            top: 1rem;
+        }
+    
+    }
+
+    
     header {
         .left h1 {
             text-align: center;
