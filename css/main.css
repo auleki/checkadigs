@@ -747,6 +747,10 @@ footer .text img {
 }
 
 @media (max-width: 863px) {
+  header .left {
+    margin-top: 1rem;
+    text-align: center;
+  }
   .header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -780,6 +784,9 @@ footer .text img {
 }
 
 @media (min-width: 320px) and (max-width: 500px) {
+  .newsletter {
+    padding: 0 5rem;
+  }
   .category .price {
     left: 1rem;
     top: 1rem;

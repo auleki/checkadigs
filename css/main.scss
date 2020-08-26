@@ -727,6 +727,12 @@ footer {
 }
 
 @media (max-width: 863px) {
+
+    header .left {
+        margin-top: 1rem;
+        text-align: center;
+    }
+
     .header {
         display: flex;
         justify-content: center;
@@ -763,6 +769,10 @@ footer {
 }
 
 @media (min-width: 320px) and (max-width: 500px) {
+
+    .newsletter {
+        padding: 0 5rem;
+    }
 
     .category {
 

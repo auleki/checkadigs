@@ -63,8 +63,16 @@ $(document).ready(function() {
 });
 
 
+
+// SUBSCRIPTION FORM 
+const funcURL = 'https://script.google.com/macros/s/AKfycbwNjscNxQFBL8r_QxSdkifqfC4f8rED_n5DYLQeu3klraEcnbgi/exec';
+
+
 subscribeForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log(emailInput.value);
+    fetch(funcURL, {  method: "POST", body: new FormData(subscribeForm)  })
+        .then(response => alert("Thanks for Contacting us..! We will reach back"))
+        .catch(err => console.log("error with form!", err.message))
+    // console.log(emailInput.value);
     emailInput.value = ''
 })
