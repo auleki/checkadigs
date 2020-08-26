@@ -56,6 +56,10 @@ nav {
     }
 
     .logo {
+        a {
+            text-decoration: none;
+            color: $c5;
+        }
 
         h1 {
             font-family: $f3;
@@ -231,6 +235,7 @@ header {
         top: 10%;
         // left: 10%;
         position: absolute;
+       
         img {
             height: auto;
             width: 10%;
@@ -284,7 +289,7 @@ header {
         color: $c1;
         position: relative;
         display: inline;
-        text-align: justify;
+        text-align: center;
         justify-content: center;
         // vertical-align: middle;
         align-items: center;
@@ -456,6 +461,25 @@ header {
         border-radius: .3rem;
         position: absolute;
         top: 0;
+    }
+
+    .buy {
+        text-decoration: none;
+        color: $c4;
+        padding: .5rem;
+        border-radius: .3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: rgb(24, 231, 51);
+        transition: background-color 250ms ease-in;
+
+        &:hover {
+            background-color: $c5;
+        }
     }
 
 }
@@ -780,11 +804,26 @@ footer {
             left: 1rem;    
             top: 1rem;
         }
+
+        .buy {
+            right: 1rem;
+        }
     
     }
 
     
     header {
+
+        .order-button {
+            padding: 0rem 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .out-button {
+            padding: .8rem 1rem;
+            border: none;
+        }
+
         .left h1 {
             text-align: center;
         }
@@ -809,12 +848,13 @@ footer {
         flex-direction: column;
         text-align: center;
 
-        a {
-            margin: .5rem 0;
-            text-align: center;
-            padding: .5rem 1.5rem;
 
-        }
+
+        // a {
+        //     margin: .5rem 0;
+        //     text-align: center;
+        //     padding: .5rem 1.5rem;
+        // }
     }
     header {
         padding-bottom: calc(100%/6.5);

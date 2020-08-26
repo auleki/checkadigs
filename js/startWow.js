@@ -71,7 +71,7 @@ const funcURL = 'https://script.google.com/macros/s/AKfycbwNjscNxQFBL8r_QxSdkifq
 subscribeForm.addEventListener('submit', (e) => {
     e.preventDefault();
     fetch(funcURL, {  method: "POST", body: new FormData(subscribeForm)  })
-        .then(response => alert("Thanks for Contacting us..! We will reach back"))
+        .then(response => alert("Thanks for subscribing to our newsletter"))
         .catch(err => console.log("error with form!", err.message))
     // console.log(emailInput.value);
     emailInput.value = ''
