@@ -8,15 +8,8 @@ body {
     background-color: $c4;
     color: $c5;
     overflow-x: hidden;
-    font-family: $f1;
-    
+    font-family: $f1;    
 }
-
-// img {
-//     margin: 2rem 0;
-//     height: auto;
-//     width: 10rem;
-// }
 
 nav {
     padding: 1rem;
@@ -221,8 +214,11 @@ nav {
 
 header {
     // height: 30rem;
+    width: 100%;
     height: 100vh;
-    background-color: $c4;
+    background-color: $c5;
+    background: url('/images/header02.jpg') center no-repeat;
+    background-position: cover;
     display: flex;
     // flex-wrap: wrap-reverse;
     flex-direction: column;
@@ -488,42 +484,49 @@ header {
 
 }
 
-// section {
-//     // clip-path: polygon(100% 28%, 100% 100%, 0 100%, 0 0);
-//     // display: grid;
-//     // place-items: center;
-//     display: flex;
-//     // flex-wrap: wrap-reverse;
-//     justify-content: space-around;
-//     align-items: center;
-//     height: 100vh;
-//     grid-template-columns: 2fr 2fr;
-//     // background-color: $c1;
-//     // margin: 5rem 0;
-//     padding: 1rem 0;
+.about {
+    // width: 70%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 
-//     .text {
-//         width: 50%;
-//         p {
-//             font-size: 1.7rem;
-//             line-height: 3rem;
-//             color: $c3;
-//         }
-//         span {
-//             color: $c1;
-//             font-weight: 600;
-//         }
-//     }
+    .title {
+        margin: 5rem;
+        h2 {
+            font-size: 2rem;
+            display: inline;
+            border-bottom: .5rem solid $c1;
+            // width: 15%;
+            // border-bottom-width: 10%;
+            padding: 0 1.5rem .5rem 0;            
+        }
+    }
 
-//     .image {
-//         img {
-//             z-index: 1000;
-//             height: auto;
-//             width: 20rem;
-//         }
-//     }
-// }
+    p,span {
+        padding-left: 2.5rem;
+    }
 
+    .paras {
+        width: 70%;
+        text-align: center;
+
+        p {
+            margin: 1rem 0;
+            color: darken($c5, 10%);
+            font-size: 1.2rem;
+            text-align: left;
+        }
+
+        span {
+            color: $c3;
+            width: 100%;
+            font-weight: 700;
+        }
+
+    }
+}
 
 .newsletter {
     // position: absolute;
