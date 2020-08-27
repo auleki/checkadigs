@@ -487,6 +487,10 @@ header .right img {
   background-color: #1f1b1b;
 }
 
+.category .title:nth-child(1) {
+  margin: 3rem;
+}
+
 .category .title {
   margin: 5rem;
 }
@@ -856,7 +860,7 @@ footer .text img {
     text-align: center;
   }
   header {
-    padding-bottom: calc(100%/6.5);
+    padding-bottom: calc(100%/80);
     text-align: center;
   }
   section .text {

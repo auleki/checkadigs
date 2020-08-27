@@ -437,6 +437,10 @@ header {
 
 .category {
 
+    .title:nth-child(1) {
+        margin: 3rem;
+    }
+
     .title {
         margin: 5rem;
         h2 {
@@ -857,7 +861,7 @@ footer {
         // }
     }
     header {
-        padding-bottom: calc(100%/6.5);
+        padding-bottom: calc(100%/80);
         text-align: center;
     }
 
