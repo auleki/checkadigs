@@ -10,13 +10,11 @@
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    
-    
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">    
 </head>
 <body>
     
-    <nav>
+    <nav class="wow fadeInDown">
         <div class="logo">
             <!-- <img src="images/CA Logo.png" alt="logo"> -->
             <a href="/">
@@ -45,19 +43,19 @@
             </li>
             <!-- <li><a href="" class="links">About Us</a></li> -->
             <li><a href="quiz.html" class="links quiz">Quiz</a></li>
-            <li><a href="" class="links contact">Contact Us</a></li>
+            <li><a href="#aboutUs" class="links contact">About Us</a></li>
             
         </ul>
       </nav>
       
-      <header>
-      <div class="header">
+      <header class="wow fadeInDownBig">
+      <!-- <div class="header"> -->
       
         <!-- <div class="logo">
             <img src="images/CA Logo.png" alt="logo">
         </div> -->
       
-        <div class="left wow fadeInRightBig">
+        <div class="left">
             <h1>We are live!</h1>
             <div class="paras">
                 <p>Place your orders now via Whatsapp</p>
@@ -83,12 +81,12 @@
             
         </div>
       
-        <div class="right wow fadeInDownBig">
-            <!-- <img src="images/fashion-business.png" alt="header graphic"> -->
+        <!-- <div class="right wow fadeInDownBig">
+            
             <img src="images/CA Logo.png" alt="logo">
-        </div> 
+        </div>  -->
                
-      </div>
+      <!-- </div> -->
        
        <div class="point">
         <i id="word" class="las la-angle-double-down"></i>
@@ -365,10 +363,38 @@
             </div>          
     
         </section>
+        <!-- NEED TO FIX? -->
+        <div class="about wow fadeInUpBig" id="aboutUs">
+            <div class="title">
+                <h2>About US</h2>
+            </div>
+
+            <div class="paras">
+                <p>
+                    Check adigs brings to you her first T-shirt product which was designed and fabricated to suit
+                    your taste, with its novel wear which has been made to be suitable for all individual and for your
+                    favourite occasion.
+                </p>
+                <span>
+                    Looking for a perfect fit to wear?
+                </span>
+    
+                <p>
+                    Our large variety of fabrics, colours and styles have you covered. Our main target is to make
+                    fashion accessible and affordable for everyone
+                </p>
+                
+                <p>
+                    We are really excited and we can't wait to see you all look gorgeous in this highly quality fabrics
+                    and unique textures
+                </p>
+            </div>
+            
+        </div>
 
       </main>
 
-      <div class="newsletter">
+      <div class="newsletter wow fadeInRightBig">
         <h3>Subscribe to get on our mailing list</h3>
         <div class="subscribe">
             <form id="subscribeForm">
@@ -390,9 +416,8 @@
         </div>
     </div>
       
-      <footer class="wow fadeIn">
 
-        
+      <footer class="wow fadeInUp">        
 
        <div class="icons">
            <a href="https://instagram.com/check_adigs" target="_blank" rel="noreferrer" class="links">
@@ -426,8 +451,8 @@
     crossorigin="anonymous">
     </script>
     <script src="js/owl.carousel.min.js"></script>
+    <script src="js/wow.min.js"></script>
    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
-   <script defer src="js/wow.min.js"></script>
    <script src="js/startWow.js"></script>
    <script src="js/main.js"></script>
 </body>
