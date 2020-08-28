@@ -238,8 +238,8 @@ nav .navbar li .dropdown_menu-6 {
 header {
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, right top, left top, from(#d18c0c54), to(#0000003d)), url("/images/header00.png") fixed center center no-repeat;
-  background: linear-gradient(to left, #d18c0c54, #0000003d), url("/images/header00.png") fixed center center no-repeat;
+  background: -webkit-gradient(linear, right top, left top, from(#d18c0c54), to(#0000003d)), url("/images/header00.webp") fixed center center no-repeat;
+  background: linear-gradient(to left, #d18c0c54, #0000003d), url("/images/header00.webp") fixed center center no-repeat;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -871,8 +871,20 @@ footer .text img {
 }
 
 @media (min-width: 320px) and (max-width: 500px) {
+  .about p {
+    padding: 0 1rem;
+  }
+  .about .title {
+    margin: 4rem 0 .5rem;
+  }
+  .about .title h2 {
+    padding: 0 1rem;
+  }
   .about .paras {
-    width: 90%;
+    width: 100%;
+  }
+  .about .paras p {
+    text-align: center;
   }
   .newsletter {
     padding: 0 5rem;
